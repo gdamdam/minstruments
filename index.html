@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181b18" />
+    <meta
+      name="description"
+      content="m//instruments — independent, free and open-source music instruments for the browser."
+    />
+    <title>m//instruments</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./rack.css" />
+  </head>
+  <body class="rack-direction">
+    <a class="skip-link" href="#main">Skip to instruments</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="m instruments, home">
+        <span>m</span><i>//</i><span>instruments</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        menu
+      </button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="#choose">Choose</a>
+        <a href="#instruments">Instruments</a>
+        <a href="#workflows">Workflows</a>
+        <a href="https://github.com/gdamdam" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-kicker">System M//08 · Local signal network</div>
+        <h1 id="hero-title">Instrument system <em>for browser sound.</em></h1>
+        <p class="hero-copy">
+          Eight independent modules for beats, loops, harmony, drones, MIDI, grains, and spectral
+          sound. Patch only what you need. Your audio stays on your machine.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#choose">Open patch matrix</a>
+          <a class="button button-quiet" href="#workflows">View signal routes</a>
+        </div>
+        <ul class="principles" aria-label="Suite principles">
+          <li>Free</li>
+          <li>Open source</li>
+          <li>No accounts</li>
+          <li>Local-first</li>
+        </ul>
+        <div class="hero-signal" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="chooser section" id="choose" aria-labelledby="choose-title">
+        <div class="section-heading">
+          <p class="eyebrow">Patch matrix</p>
+          <h2 id="choose-title">What signal do you need?</h2>
+          <p>Select a musical role to locate its module.</p>
+        </div>
+        <div class="intent-grid">
+          <button class="intent" type="button" data-target="mpump">
+            <span>01</span><strong>Make a beat</strong><small>Drums, bass, synth, shareable links</small>
+          </button>
+          <button class="intent" type="button" data-target="mloop">
+            <span>02</span><strong>Record and loop</strong><small>Live layers, pads, samples, resampling</small>
+          </button>
+          <button class="intent" type="button" data-target="mchord">
+            <span>03</span><strong>Move through chords</strong><small>Progressions, voice leading, MIDI</small>
+          </button>
+          <button class="intent" type="button" data-target="mdrone">
+            <span>04</span><strong>Hold a sound</strong><small>Microtonal drones and slow evolution</small>
+          </button>
+          <button class="intent" type="button" data-target="midip">
+            <span>05</span><strong>Sequence hardware</strong><small>A terminal groovebox for MIDI gear</small>
+          </button>
+          <button class="intent" type="button" data-target="mpumpit">
+            <span>06</span><strong>Turn MIDI into sound</strong><small>A browser sound module for any sequencer</small>
+          </button>
+          <button class="intent" type="button" data-target="mgrains">
+            <span>07</span><strong>Break sound into grains</strong><small>Clouds, fragments, live granular play</small>
+          </button>
+          <button class="intent" type="button" data-target="mspectr">
+            <span>08</span><strong>Play a sound’s spectrum</strong><small>Capture, morph, blur, harmonize</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="catalog section" id="instruments" aria-labelledby="instruments-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Module rack</p>
+            <h2 id="instruments-title">Eight instruments. Separate circuits.</h2>
+          </div>
+          <p>No bundle, login, or shared project database. Every module runs on its own.</p>
+        </div>
+
+        <div class="instrument-grid">
+          <article class="instrument-card" id="mpump" style="--accent:#78ff9b">
+            <div class="card-index">m/01</div>
+            <img class="instrument-mark" src="/marks/mpump.svg" alt="mpump sequencer-grid logo" />
+            <h3 class="native-wordmark native-wordmark-mpump" aria-label="mpump"><span aria-hidden="true">█▀▄▀█ █▀█ █ █ █▀▄▀█ █▀█
+█ ▀ █ █▀▀ ▀▄▀ █ ▀ █ █▀▀</span></h3>
+            <p>A fast browser groovebox where drums, bass, synth, and the complete beat live in a shareable link.</p>
+            <div class="tags"><span>beat</span><span>groovebox</span><span>share</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mpump.live" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mpump" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="mloop" style="--accent:#ff896f">
+            <div class="card-index">m/02</div>
+            <img class="instrument-mark" src="/marks/mloop.svg" alt="mloop tape-reel logo" />
+            <h3 class="native-wordmark native-wordmark-mloop" aria-label="mloop"><span aria-hidden="true">█▀▄▀█ █   █▀█ █▀█ █▀█
+█ ▀ █ █▄▄ █▄█ █▄█ █▀▀</span></h3>
+            <p>A live loop station and sampler for recording, layering, sequencing pads, resampling, and gentle destruction.</p>
+            <div class="tags"><span>loop</span><span>sample</span><span>perform</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mloop.mpump.live" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mloop" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="mdrone" style="--accent:#c7a9ff">
+            <div class="card-index">m/03</div>
+            <img class="instrument-mark" src="/marks/mdrone.svg" alt="mdrone instrument logo" />
+            <h3 class="native-wordmark native-wordmark-mdrone" aria-label="mdrone"><span aria-hidden="true">█▀▄▀█ █▀▄ █▀█ █▀█ █▄ █ █▀▀
+█ ▀ █ █▄▀ █▀▄ █▄█ █ ▀█ ██▄</span></h3>
+            <p>A microtonal drone instrument for slowly evolving, deeply layered sound that can hold for an hour.</p>
+            <div class="tags"><span>drone</span><span>microtonal</span><span>texture</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mdrone.org" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mdrone" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="mpumpit" style="--accent:#f3c85b">
+            <div class="card-index">m/04</div>
+            <h3 class="native-wordmark native-wordmark-mpumpit" aria-label="mpumpit"><span class="mpumpit-rendered-wordmark" aria-hidden="true"></span></h3>
+            <p>A compact browser MIDI sound module that turns notes from a sequencer, DAW, or controller into sound.</p>
+            <div class="tags"><span>midi in</span><span>synth</span><span>sound module</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mpumpit.mpump.live" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mpumpit" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="midip" style="--accent:#73d7e8">
+            <div class="card-index">m/05</div>
+            <div class="instrument-mark terminal-mark" aria-label="midip terminal transport logo">
+              <b>▶ PLAY</b><span>124 BPM</span><span>LINK</span>
+              <small>▸1 DRUM&nbsp;&nbsp;●···●···</small>
+            </div>
+            <h3>midip</h3>
+            <p>A terminal MIDI sequencer and live groovebox for patterns, scenes, song chains, and hardware performance.</p>
+            <div class="tags"><span>terminal</span><span>midi out</span><span>hardware</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://github.com/gdamdam/midip/releases/latest" target="_blank" rel="noreferrer">Get latest release ↗</a>
+              <a href="https://github.com/gdamdam/midip" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="mchord" style="--accent:#b6d36f">
+            <div class="card-index">m/06</div>
+            <img class="instrument-mark" src="/marks/mchord.svg" alt="mchord three-voice logo" />
+            <h3 class="native-wordmark native-wordmark-mchord" aria-label="mchord"><span class="mchord-rendered-wordmark" aria-hidden="true"></span></h3>
+            <p>A harmony-first performance instrument for building progressions and moving through smoothly voiced chords.</p>
+            <div class="tags"><span>harmony</span><span>voice leading</span><span>midi</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mchord.mpump.live" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mchord" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="mgrains" style="--accent:#ff77b7">
+            <div class="card-index">m/07</div>
+            <img class="instrument-mark" src="/marks/mgrains.svg" alt="mgrains logo" />
+            <h3 class="native-wordmark native-wordmark-mgrains"><img src="/marks/mgrains-wordmark.svg" alt="mgrains" /></h3>
+            <p>A granular instrument that blooms generated, imported, or live sound into clouds—or shatters it into rhythm.</p>
+            <div class="tags"><span>granular</span><span>live input</span><span>transform</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mgrains.mpump.live" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mgrains" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+
+          <article class="instrument-card" id="mspectr" style="--accent:#fd684f">
+            <div class="card-index">m/08</div>
+            <h3 class="native-wordmark native-wordmark-mspectr">
+              <svg viewBox="0 0 128 128" width="42" height="42" aria-hidden="true" focusable="false">
+                <line x1="8.3" y1="67.6" x2="46.3" y2="67.6" stroke="currentColor" stroke-width="4.75" stroke-linecap="round" />
+                <path d="M52 39.1 L80.5 103.7 L23.5 103.7 Z" fill="currentColor" fill-opacity=".06" stroke="currentColor" stroke-width="3.8" stroke-linejoin="round" />
+                <g stroke-width="4.75" stroke-linecap="round"><line x1="76.7" y1="86.6" x2="112.8" y2="54.3" stroke="#8b7bf0"/><line x1="77.7" y1="89.5" x2="114.7" y2="66.7" stroke="#46d4f0"/><line x1="78.6" y1="92.3" x2="115.6" y2="79" stroke="#5fe488"/><line x1="78.6" y1="95.1" x2="114.7" y2="91.3" stroke="#ffc24b"/><line x1="77.7" y1="98" x2="112.8" y2="103.7" stroke="#ef5d6c"/></g>
+              </svg>
+              <span>MSPECTR</span>
+            </h3>
+            <p>A spectral resynthesis instrument for capturing what sounds are made of, then morphing and playing that identity.</p>
+            <div class="tags"><span>spectral</span><span>capture</span><span>resynthesis</span></div>
+            <div class="card-actions">
+              <a class="launch" href="https://mspectr.mpump.live" target="_blank" rel="noreferrer">Open instrument ↗</a>
+              <a href="https://github.com/gdamdam/mspectr" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflows section" id="workflows" aria-labelledby="workflows-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Signal routes</p>
+            <h2 id="workflows-title">Patch the modules together.</h2>
+          </div>
+          <p>Four practical routes through the collection, with no suite account or proprietary project format.</p>
+        </div>
+
+        <div class="workflow-list">
+          <details class="workflow" open>
+            <summary>
+              <span class="workflow-number">01</span>
+              <span><strong>Sequence browser sound from the terminal</strong><small>midip → virtual MIDI → mpumpit</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow" aria-label="midip sends MIDI through a virtual port to mpumpit">
+                <span>midip<small>notes + clock</small></span><b>→</b><span>virtual MIDI<small>local port</small></span><b>→</b><span>mpumpit<small>browser audio</small></span>
+              </div>
+              <ol>
+                <li><strong>Create a local MIDI path.</strong> On macOS enable the IAC Driver; on Windows create a loopMIDI port; on Linux create or connect an ALSA MIDI port.</li>
+                <li><strong>Route midip.</strong> Open the route editor with <kbd>w</kbd>, choose the virtual port for each lane, and keep the defaults: synth 1, bass 2, drums 10.</li>
+                <li><strong>Open mpumpit.</strong> Press Start Audio, select that virtual port under MIDI IN, then confirm channels 1 / 2 / 10.</li>
+                <li><strong>Press play in midip.</strong> midip owns the sequence; mpumpit supplies the synth, bass, drums, and effects.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="workflow">
+            <summary>
+              <span class="workflow-number">02</span>
+              <span><strong>Play voiced chords through another instrument</strong><small>mchord → virtual MIDI → mpumpit or hardware</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow" aria-label="mchord sends voiced notes to mpumpit or hardware">
+                <span>mchord<small>voiced chords</small></span><b>→</b><span>MIDI out<small>virtual or USB</small></span><b>→</b><span>mpumpit / gear<small>sound</small></span>
+              </div>
+              <ol>
+                <li><strong>Build the progression.</strong> Pick a key and mode in mchord, fill the chord slots, then choose Smooth, Wide, or Bass voice leading.</li>
+                <li><strong>Choose a MIDI destination.</strong> Enable MIDI out and select either your USB instrument or a local virtual MIDI port.</li>
+                <li><strong>For mpumpit,</strong> open it in Chromium, start audio, select the same virtual port, and route mchord’s channel to the synth or bass part.</li>
+                <li><strong>Perform from mchord.</strong> Its rhythm styles and voice-leading determine the actual notes; the destination only supplies the sound.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="workflow">
+            <summary>
+              <span class="workflow-number">03</span>
+              <span><strong>Run a synchronized browser ensemble</strong><small>Link Bridge → mpump + mchord + mdrone + mgrains</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow ensemble" aria-label="Link Bridge synchronizes four browser instruments">
+                <span>Link Bridge<small>shared tempo</small></span><b>→</b><span>mpump</span><span>mchord</span><span>mdrone</span><span>mgrains</span>
+              </div>
+              <ol>
+                <li><strong>Install and run mpump Link Bridge</strong> from the mpump releases page. Leave it running locally.</li>
+                <li><strong>Open the instruments in separate tabs.</strong> Use mpump for the beat, mchord for harmony, mdrone for a bed, and mgrains for tempo-locked fragments.</li>
+                <li><strong>Enable Link in each instrument.</strong> Wait until each one reports the bridge or Link session as connected.</li>
+                <li><strong>Set the tempo once.</strong> Start mpump, then bring the other parts in. Link carries tempo and phase—not audio—so mix the tabs or route them through your system audio setup.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="workflow">
+            <summary>
+              <span class="workflow-number">04</span>
+              <span><strong>Turn one drone into two new instruments</strong><small>mdrone WAV → mgrains + mspectr</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow fork" aria-label="An mdrone recording is imported into mgrains and mspectr">
+                <span>mdrone<small>24-bit WAV</small></span><b>↗</b><span>mgrains<small>cloud / shatter</small></span><b>↘</b><span>mspectr<small>capture / morph</small></span>
+              </div>
+              <ol>
+                <li><strong>Make a source in mdrone.</strong> Shape a stable scene, then use BOUNCE LOOP for a short seamless WAV or TIMED REC for a longer take.</li>
+                <li><strong>Granulate it.</strong> Drop the WAV into mgrains. Use Bloom for a continuous cloud or Shatter for tempo-synced fragments.</li>
+                <li><strong>Capture its identity.</strong> Drop the same WAV into mspectr, play it, and capture Snapshot A.</li>
+                <li><strong>Create contrast.</strong> Export a second mdrone variation, capture it as Snapshot B, then perform the spectral morph between them.</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="closing section">
+        <p class="eyebrow">System principle</p>
+        <blockquote>Nothing leaves the room unless you send it.</blockquote>
+        <p>
+          m//instruments are free and open source. There are no accounts, subscriptions, ads,
+          or central creative profiles. Each project has its own license and source repository.
+        </p>
+        <a class="button button-primary" href="#instruments">Choose an instrument</a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark" href="#top"><span>m</span><i>//</i><span>instruments</span></a>
+      <p>Independent music instruments for the browser.</p>
+      <p>Built in the open by <a href="https://github.com/gdamdam" target="_blank" rel="noreferrer">gdamdam ↗</a></p>
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+/* Direction 02 — patch bay / equipment rack. Applied after the base layout. */
+.rack-direction {
+  --rack-bg: #171917;
+  --rack-panel: #242724;
+  --rack-raised: #2d302d;
+  --rack-deep: #0b0d0b;
+  --rack-line: #060706;
+  --rack-edge: #484c46;
+  --rack-text: #e8e5d9;
+  --rack-muted: #979b91;
+  --rack-green: #83f27a;
+  --rack-amber: #f1b94d;
+  background:
+    radial-gradient(circle at 18% -10%, rgba(135,160,125,.08), transparent 30%),
+    #121412;
+  color: var(--rack-text);
+  font-family: var(--mono);
+}
+
+.rack-direction .site-header {
+  min-height: 58px;
+  padding-inline: clamp(1rem, 3vw, 3rem);
+  border-bottom: 2px solid #050605;
+  background: #202320;
+  box-shadow: inset 0 1px #454943, 0 5px 18px rgba(0,0,0,.34);
+  backdrop-filter: none;
+}
+.rack-direction .site-header::before,
+.rack-direction .site-header::after {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #080908;
+  border-radius: 50%;
+  background: #555a53;
+  content: "";
+}
+.rack-direction .wordmark { font-size: .78rem; letter-spacing: .04em; }
+.rack-direction .wordmark i { color: var(--rack-green); }
+.rack-direction .site-header nav { margin-left: auto; }
+.rack-direction .site-header nav a { color: #a8aca3; letter-spacing: .09em; }
+.rack-direction .site-header nav a:hover { color: var(--rack-green); }
+
+.rack-direction .hero {
+  width: min(1240px, calc(100% - 2rem));
+  min-height: 720px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: clamp(2rem, 5vw, 5rem);
+  border: 3px solid var(--rack-line);
+  background:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+    var(--rack-panel);
+  background-size: 24px 24px;
+  box-shadow: inset 0 1px var(--rack-edge), inset 0 -1px #111, 0 24px 55px rgba(0,0,0,.35);
+}
+.rack-direction .hero::before {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  left: 1.5rem;
+  height: 42px;
+  border: 1px solid #3a4038;
+  background: #0c130c;
+  box-shadow: inset 0 0 16px rgba(92,255,94,.04);
+  content: "M//08  INSTRUMENT SYSTEM                                      LOCAL / READY";
+  color: var(--rack-green);
+  font-size: .65rem;
+  line-height: 42px;
+  padding-inline: 1rem;
+  letter-spacing: .08em;
+  white-space: pre;
+  overflow: hidden;
+}
+.rack-direction .hero-kicker,
+.rack-direction .eyebrow {
+  color: var(--rack-green);
+  letter-spacing: .14em;
+}
+.rack-direction .hero-kicker { margin-top: 3rem; }
+.rack-direction h1 {
+  max-width: 950px;
+  margin: 2.6rem 0 2rem;
+  font-family: var(--mono);
+  font-size: clamp(3rem, 7.2vw, 7.2rem);
+  font-weight: 500;
+  letter-spacing: -.075em;
+  line-height: .9;
+  text-transform: uppercase;
+}
+.rack-direction h1 em {
+  margin-top: .18em;
+  color: var(--rack-green);
+  font-family: var(--mono);
+  font-size: .58em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+.rack-direction .hero-copy {
+  max-width: 760px;
+  color: #b8bcb2;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.rack-direction .button {
+  border: 1px solid #6d7269;
+  border-radius: 2px;
+  background: #303430;
+  box-shadow: inset 0 1px #565b54, 0 2px 0 #090a09;
+  color: var(--rack-text);
+  letter-spacing: .08em;
+}
+.rack-direction .button:hover { border-color: var(--rack-green); color: var(--rack-green); }
+.rack-direction .button-primary { border-color: #527d4d; background: #20361f; color: var(--rack-green); }
+.rack-direction .principles { margin-top: 3.5rem; }
+.rack-direction .principles li {
+  padding: .45rem .65rem;
+  border: 1px solid #40443e;
+  background: #1a1d1a;
+}
+.rack-direction .principles li::before { color: var(--rack-green); text-shadow: 0 0 8px var(--rack-green); }
+.rack-direction .hero-signal { right: 4rem; bottom: 4rem; padding: .8rem; border: 1px solid #3b4039; background: #0b0e0b; }
+.rack-direction .hero-signal span { width: 5px; background: var(--rack-green); box-shadow: 0 0 5px rgba(131,242,122,.45); }
+
+.rack-direction .section {
+  width: min(1240px, calc(100% - 2rem));
+  padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem);
+}
+.rack-direction .section-heading h2 {
+  font-family: var(--mono);
+  font-size: clamp(2rem, 4.8vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  text-transform: uppercase;
+}
+.rack-direction .section-heading > p,
+.rack-direction .split-heading > p { color: var(--rack-muted); font-family: var(--mono); font-size: .76rem; }
+
+.rack-direction .chooser {
+  margin-block: 3rem;
+  border: 3px solid var(--rack-line);
+  background: var(--rack-panel);
+  box-shadow: inset 0 1px var(--rack-edge), 0 18px 40px rgba(0,0,0,.3);
+}
+.rack-direction .intent-grid { border-color: #090a09; background: #151815; }
+.rack-direction .intent {
+  min-height: 170px;
+  border-color: #090a09;
+  background: linear-gradient(180deg, #303330, #272a27);
+  box-shadow: inset 0 1px #4a4e47;
+  color: var(--rack-text);
+}
+.rack-direction .intent::after {
+  float: right;
+  width: 8px;
+  height: 8px;
+  margin-top: -4.4rem;
+  border: 2px solid #111;
+  border-radius: 50%;
+  background: #62665f;
+  content: "";
+}
+.rack-direction .intent:hover,
+.rack-direction .intent:focus-visible {
+  background: #101a10;
+  color: var(--rack-green);
+  box-shadow: inset 0 0 24px rgba(131,242,122,.08);
+}
+.rack-direction .intent:hover::after,
+.rack-direction .intent:focus-visible::after { background: var(--rack-green); box-shadow: 0 0 10px var(--rack-green); }
+.rack-direction .intent span { color: #7f847b; }
+.rack-direction .intent strong { font-family: var(--mono); font-size: .92rem; letter-spacing: .04em; text-transform: uppercase; }
+.rack-direction .intent small { color: #989d93; font-family: var(--mono); font-size: .68rem; }
+.rack-direction .intent:hover span,
+.rack-direction .intent:hover small,
+.rack-direction .intent:focus-visible span,
+.rack-direction .intent:focus-visible small { color: #80a17a; }
+
+.rack-direction .catalog {
+  width: min(1240px, calc(100% - 2rem));
+  max-width: 1240px;
+  margin: 3rem auto;
+  border: 3px solid var(--rack-line);
+  background: var(--rack-panel);
+  color: var(--rack-text);
+  box-shadow: inset 0 1px var(--rack-edge), 0 18px 40px rgba(0,0,0,.3);
+}
+.rack-direction .catalog > * { width: 100%; }
+.rack-direction .catalog .eyebrow { color: var(--rack-green); }
+.rack-direction .catalog .section-heading > p { color: var(--rack-muted); }
+.rack-direction .instrument-grid { border-top: 2px solid var(--rack-line); border-left: 2px solid var(--rack-line); }
+.rack-direction .instrument-card {
+  min-height: 430px;
+  border: 0;
+  border-right: 2px solid var(--rack-line);
+  border-bottom: 2px solid var(--rack-line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.025), transparent 30%),
+    var(--rack-raised);
+  box-shadow: inset 0 1px var(--rack-edge);
+  color: var(--rack-text);
+}
+.rack-direction .instrument-card:nth-last-child(-n+2) { border-bottom: 2px solid var(--rack-line); }
+.rack-direction .instrument-card::before {
+  top: 14px;
+  right: 14px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #101110;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 65%, transparent);
+}
+.rack-direction .instrument-card::after {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  background: #555a53;
+  content: "";
+}
+.rack-direction .instrument-card.is-selected {
+  background: #101510;
+  color: var(--rack-text);
+  box-shadow: inset 0 0 42px rgba(131,242,122,.09);
+}
+.rack-direction .card-index { color: var(--accent); letter-spacing: .12em; }
+.rack-direction .card-index::after { content: "  / SIGNAL MODULE"; color: #7b8077; }
+.rack-direction .instrument-card h3:not(.native-wordmark) { color: var(--rack-text); font-family: var(--mono); text-transform: uppercase; }
+.rack-direction .instrument-card h3:not(.native-wordmark)::first-letter { color: var(--accent); }
+.rack-direction .instrument-card > p { color: #c2c5bd; font-family: var(--sans); font-size: .98rem; line-height: 1.65; }
+.rack-direction .instrument-mark { filter: saturate(.85); }
+.rack-direction .tags span { border-color: #50554d; background: #202320; color: #aeb2a8; }
+.rack-direction .card-actions a { color: #c8cbc3; }
+.rack-direction .card-actions .launch { border-bottom-color: var(--accent); color: var(--accent); }
+
+.rack-direction .workflows {
+  margin-block: 3rem;
+  border: 3px solid var(--rack-line);
+  background: var(--rack-panel);
+  box-shadow: inset 0 1px var(--rack-edge), 0 18px 40px rgba(0,0,0,.3);
+}
+.rack-direction .workflow-list { border-color: var(--rack-line); }
+.rack-direction .workflow { border-color: #090a09; }
+.rack-direction .workflow summary { min-height: 112px; padding-inline: 1.25rem; background: #292c29; box-shadow: inset 0 1px #464a44; }
+.rack-direction .workflow summary:hover strong { color: var(--rack-green); }
+.rack-direction .workflow-number { color: var(--rack-amber); }
+.rack-direction .workflow summary small { color: #8f948a; }
+.rack-direction .workflow summary i { color: var(--rack-green); }
+.rack-direction .workflow-body { padding: 2rem; background: #151815; }
+.rack-direction .signal-flow span { border: 2px solid #080908; background: #2a2d2a; box-shadow: inset 0 1px #4b4f48; }
+.rack-direction .signal-flow span:first-child { border-color: #52754d; }
+.rack-direction .signal-flow b { color: var(--rack-amber); }
+.rack-direction .workflow-body li { border-color: #090a09; background: #232623; color: #aaaFA5; }
+.rack-direction .workflow-body li strong { color: var(--rack-text); }
+.rack-direction .workflow-body li::before { color: var(--rack-green); }
+
+.rack-direction .closing {
+  width: min(1240px, calc(100% - 2rem));
+  min-height: 620px;
+  margin: 3rem auto;
+  border: 3px solid var(--rack-line);
+  background: #0d120d;
+  box-shadow: inset 0 0 60px rgba(131,242,122,.04);
+}
+.rack-direction .closing blockquote { max-width: 980px; color: var(--rack-green); font-family: var(--mono); font-size: clamp(2.5rem, 6vw, 5.5rem); text-transform: uppercase; }
+.rack-direction footer { border-top: 2px solid #050605; background: #202320; box-shadow: inset 0 1px #454943; }
+
+@media (max-width: 900px) {
+  .rack-direction .hero { min-height: 680px; }
+  .rack-direction .instrument-card { min-height: 450px; }
+}
+@media (max-width: 680px) {
+  .rack-direction .site-header::before,
+  .rack-direction .site-header::after { display: none; }
+  .rack-direction .hero { width: calc(100% - 1rem); min-height: 690px; margin-top: .5rem; padding: 5.5rem 1.25rem 2rem; }
+  .rack-direction .hero::before { top: 1rem; right: 1rem; left: 1rem; font-size: .55rem; }
+  .rack-direction .hero-kicker { margin-top: 0; }
+  .rack-direction h1 { font-size: clamp(2.8rem, 14vw, 4.4rem); }
+  .rack-direction .hero-signal { display: flex; right: 1.25rem; bottom: 1.25rem; }
+  .rack-direction .section,
+  .rack-direction .catalog,
+  .rack-direction .closing { width: calc(100% - 1rem); margin-block: .5rem; }
+  .rack-direction .intent-grid { grid-template-columns: 1fr 1fr; }
+  .rack-direction .intent { min-height: 155px; padding: 1rem; }
+  .rack-direction .instrument-grid { grid-template-columns: 1fr; }
+  .rack-direction .instrument-card { min-height: 410px; }
+  .rack-direction .instrument-card:nth-last-child(2) { border-bottom: 2px solid var(--rack-line); }
+  .rack-direction .workflow-body { padding: 1rem; }
+  .rack-direction .signal-flow { padding-bottom: .5rem; }
+  .rack-direction .closing { min-height: 520px; }
+}

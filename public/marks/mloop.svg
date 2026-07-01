@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#0b1a0b"/>
+  <g stroke="#66ff99" stroke-linecap="round">
+    <g transform="translate(40 64)"><circle r="23.8" fill="none" stroke-width="3" opacity=".7"/><circle r="16.66" fill="#66ff99" stroke="none" opacity=".15"/><path d="M0 0h21.8M0 0l-10.9-18.88M0 0l-10.9 18.88" stroke-width="3.5" opacity=".8"/><circle r="7" fill="#66ff99" stroke="none" opacity=".9"/><circle r="3" fill="#0b1a0b" stroke="none"/></g>
+    <g transform="translate(88 64)"><circle r="23.8" fill="none" stroke-width="3" opacity=".7"/><circle r="16.66" fill="#66ff99" stroke="none" opacity=".15"/><path d="M0 0h21.8M0 0l-10.9-18.88M0 0l-10.9 18.88" stroke-width="3.5" opacity=".8"/><circle r="7" fill="#66ff99" stroke="none" opacity=".9"/><circle r="3" fill="#0b1a0b" stroke="none"/></g>
+  </g>
+</svg>
