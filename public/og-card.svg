@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">m//instruments</title>
+  <desc id="desc">Free open-source browser music instruments in a patch-bay visual style.</desc>
+  <rect width="1200" height="630" fill="#d8d8ce"/>
+  <rect x="52" y="54" width="1096" height="522" rx="18" fill="#181b18"/>
+  <g fill="none" stroke="#d8d8ce" opacity=".22" stroke-width="2">
+    <path d="M52 188H1148M52 322H1148M52 456H1148"/>
+    <path d="M326 54V576M600 54V576M874 54V576"/>
+  </g>
+  <g transform="translate(92 94)">
+    <text x="0" y="0" fill="#9ca197" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700" letter-spacing=".08em">SYSTEM M//09 · LOCAL SIGNAL NETWORK</text>
+    <text x="0" y="146" fill="#f3f0e7" font-family="Inter, Helvetica, Arial, sans-serif" font-size="94" font-weight="900" letter-spacing="-.06em">m//instruments</text>
+    <text x="4" y="228" fill="#f3f0e7" font-family="Inter, Helvetica, Arial, sans-serif" font-size="36" font-weight="700">Free open-source music instruments for the browser.</text>
+    <text x="4" y="292" fill="#aeb4aa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25" font-weight="700">mpump · mloop · mdrone · mpumpit · midip · mchord · mgrains · mspectr · mscope</text>
+  </g>
+  <g transform="translate(92 454)">
+    <rect width="144" height="52" fill="none" stroke="#78ff9b" stroke-width="3"/>
+    <text x="28" y="35" fill="#78ff9b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="800">FREE</text>
+    <rect x="168" width="220" height="52" fill="none" stroke="#f3c85b" stroke-width="3"/>
+    <text x="196" y="35" fill="#f3c85b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="800">OPEN SOURCE</text>
+    <rect x="412" width="210" height="52" fill="none" stroke="#73d7e8" stroke-width="3"/>
+    <text x="440" y="35" fill="#73d7e8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="800">NO ACCOUNTS</text>
+    <rect x="646" width="200" height="52" fill="none" stroke="#ff896f" stroke-width="3"/>
+    <text x="674" y="35" fill="#ff896f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="800">LOCAL-FIRST</text>
+  </g>
+  <g transform="translate(974 92)">
+    <circle cx="18" cy="18" r="18" fill="#78ff9b"/>
+    <circle cx="78" cy="18" r="18" fill="#ff896f"/>
+    <circle cx="138" cy="18" r="18" fill="#f3c85b"/>
+  </g>
+</svg>

@@ -75,6 +75,9 @@ Vite prints the local URL, normally `http://localhost:5173/`.
 ├── .github/workflows/deploy-pages.yml  # GitHub Pages CI/CD
 ├── public/
 │   ├── CNAME                           # Custom domain
+│   ├── og-card.svg                     # Social sharing preview
+│   ├── robots.txt                      # Crawler rules
+│   ├── sitemap.xml                     # Canonical sitemap
 │   └── marks/                          # Instrument identities
 ├── index.html                          # Portal content and structure
 ├── rack.css                            # Current equipment-rack direction
@@ -107,6 +110,18 @@ Repository settings must use **GitHub Actions** as the Pages publishing source. 
 ```text
 instruments.mdrone.org
 ```
+
+## SEO and indexing
+
+The canonical public URL is:
+
+```text
+https://instruments.mdrone.org/
+```
+
+The homepage includes crawlable copy, canonical metadata, Open Graph/Twitter preview tags, and JSON-LD structured data for the suite and its nine instruments. [`public/sitemap.xml`](./public/sitemap.xml) points crawlers to the canonical homepage, and [`public/robots.txt`](./public/robots.txt) advertises the sitemap.
+
+[`visual-options.html`](./visual-options.html) is intentionally marked `noindex` and blocked in `robots.txt` because it is a design-study archive, not the page that should appear in search results.
 
 ## Adding or changing an instrument
 

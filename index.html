@@ -4,13 +4,195 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#181b18" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="gdamdam" />
+    <meta
+      name="keywords"
+      content="browser music instruments, web audio instruments, open source music software, free music tools, browser groovebox, MIDI sequencer, granular synth, drone instrument, spectral resynthesis"
+    />
     <meta
       name="description"
-      content="m//instruments — independent, free and open-source music instruments for the browser."
+      content="m//instruments is a suite of free, open-source browser music tools for beats, loops, drones, MIDI, chords, grains, spectral sound, and signal analysis."
     />
-    <title>m//instruments</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="m//instruments" />
+    <meta property="og:title" content="m//instruments — free open-source browser music instruments" />
+    <meta
+      property="og:description"
+      content="Independent Web Audio instruments for beats, loops, drones, MIDI, chords, grains, spectral sound, and signal analysis. No accounts. No cloud project. Local-first."
+    />
+    <meta property="og:url" content="https://instruments.mdrone.org/" />
+    <meta property="og:image" content="https://instruments.mdrone.org/og-card.svg" />
+    <meta property="og:image:alt" content="m//instruments patch-bay style browser music instrument suite" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="m//instruments — browser music instruments" />
+    <meta
+      name="twitter:description"
+      content="Free, open-source browser instruments for making, routing, and inspecting sound."
+    />
+    <meta name="twitter:image" content="https://instruments.mdrone.org/og-card.svg" />
+    <link rel="canonical" href="https://instruments.mdrone.org/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <title>m//instruments — free open-source browser music instruments</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="./rack.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://instruments.mdrone.org/#website",
+            "url": "https://instruments.mdrone.org/",
+            "name": "m//instruments",
+            "description": "A suite of free, open-source browser music instruments.",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://github.com/gdamdam#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://github.com/gdamdam#person",
+            "name": "gdamdam",
+            "url": "https://github.com/gdamdam"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://instruments.mdrone.org/#suite",
+            "name": "m//instruments",
+            "url": "https://instruments.mdrone.org/",
+            "applicationCategory": "MusicApplication",
+            "operatingSystem": "Web browser",
+            "isAccessibleForFree": true,
+            "license": "https://github.com/gdamdam",
+            "description": "Nine local-first browser music instruments for beats, loops, drones, MIDI, harmony, granular synthesis, spectral resynthesis, and signal analysis.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://instruments.mdrone.org/#instrument-list",
+            "name": "m//instruments modules",
+            "numberOfItems": 9,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mpump",
+                  "url": "https://mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A browser groovebox for drums, bass, synth, and shareable beats."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mloop",
+                  "url": "https://mloop.mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A browser loop station and sampler for recording, layering, and resampling."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mdrone",
+                  "url": "https://mdrone.org/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A microtonal browser drone instrument for slow evolving sound."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mpumpit",
+                  "url": "https://mpumpit.mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A browser MIDI sound module for turning sequencer, DAW, or controller notes into sound."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "midip",
+                  "url": "https://github.com/gdamdam/midip",
+                  "downloadUrl": "https://github.com/gdamdam/midip/releases/latest",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "macOS, Linux, Windows",
+                  "description": "A terminal MIDI sequencer and live groovebox for hardware and local MIDI workflows."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mchord",
+                  "url": "https://mchord.mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A browser harmony instrument for progressions, voice leading, and MIDI performance."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mgrains",
+                  "url": "https://mgrains.mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A browser granular instrument for clouds, fragments, live input, and transformed sound."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mspectr",
+                  "url": "https://mspectr.mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A browser spectral resynthesis instrument for capturing, morphing, and playing sound identity."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 9,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "mscope",
+                  "url": "https://mscope.mpump.live/",
+                  "applicationCategory": "MusicApplication",
+                  "operatingSystem": "Web browser",
+                  "description": "A local-first browser audio scope for waveform, spectrum, loudness, stereo, and signal diagnostics."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="rack-direction">
     <a class="skip-link" href="#main">Skip to instruments</a>

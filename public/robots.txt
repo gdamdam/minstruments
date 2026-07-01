@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /visual-options.html
+
+Sitemap: https://instruments.mdrone.org/sitemap.xml
