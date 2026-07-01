@@ -201,7 +201,7 @@ h1 em {
   display: grid;
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .intent {
   min-height: 180px;
@@ -224,7 +224,7 @@ h1 em {
 .catalog > * { width: min(1224px, 100%); margin-right: auto; margin-left: auto; }
 .catalog .eyebrow { color: #48651e; }
 .catalog .section-heading > p { color: #62655c; }
-.instrument-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+.instrument-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .instrument-card {
   position: relative;
   min-height: 430px;
@@ -234,8 +234,8 @@ h1 em {
   background: var(--paper);
   transition: background .18s ease, color .18s ease;
 }
-.instrument-card:nth-child(even) { border-right: 1px solid #b9bbb1; }
-.instrument-card:nth-last-child(-n+2) { border-bottom: 1px solid #b9bbb1; }
+.instrument-card:nth-child(3n) { border-right: 1px solid #b9bbb1; }
+.instrument-card:nth-last-child(-n+3) { border-bottom: 1px solid #b9bbb1; }
 .instrument-card::before {
   position: absolute;
   top: 0;
@@ -538,7 +538,10 @@ footer p:last-child { text-align: right; }
 @media (max-width: 900px) {
   .intent-grid { grid-template-columns: repeat(2, 1fr); }
   .split-heading { grid-template-columns: 1fr; }
-  .instrument-card { min-height: 450px; }
+  .instrument-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .instrument-card { min-height: 450px; border-right: 0; border-bottom: 0; }
+  .instrument-card:nth-child(2n) { border-right: 1px solid #b9bbb1; }
+  .instrument-card:nth-last-child(-n+2) { border-bottom: 1px solid #b9bbb1; }
   .workflow-body { padding-left: 0; }
   footer { grid-template-columns: 1fr; }
   footer p:last-child { text-align: left; }
@@ -574,10 +577,11 @@ footer p:last-child { text-align: right; }
   .intent-grid, .instrument-grid { grid-template-columns: 1fr; }
   .intent { min-height: 148px; }
   .intent span { margin-bottom: 1.8rem; }
-  .instrument-card { min-height: 410px; border-right: 1px solid #b9bbb1; }
+  .instrument-card { min-height: 410px; border-right: 1px solid #b9bbb1; border-bottom: 0; }
   .instrument-mark { width: 62px; height: 62px; border-radius: 12px; }
   .ascii-mark { width: 158px; max-width: 158px; font-size: 6px; }
-  .instrument-card:nth-last-child(2) { border-bottom: 0; }
+  .instrument-card:nth-last-child(-n+2) { border-bottom: 0; }
+  .instrument-card:last-child { border-bottom: 1px solid #b9bbb1; }
   .workflow summary { grid-template-columns: 40px 1fr 28px; }
   .signal-flow { gap: .55rem; }
   .signal-flow span { min-width: 130px; }
