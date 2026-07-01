@@ -4,7 +4,7 @@
 
 [Open the suite](https://instruments.mdrone.org/) · [Browse the instruments](https://instruments.mdrone.org/#instruments) · [See the workflows](https://instruments.mdrone.org/#workflows)
 
-m//instruments is a simple portal and launcher for eight free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
+m//instruments is a simple portal and launcher for nine free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
 
 There is no suite account, subscription, shared project database, or proprietary format. Each instrument remains an independent project with its own identity and repository.
 
@@ -20,6 +20,7 @@ There is no suite account, subscription, shared project database, or proprietary
 | **mchord** | A harmony-first performance instrument for building progressions and moving through smoothly voiced chords. | [mchord.mpump.live](https://mchord.mpump.live/) | [gdamdam/mchord](https://github.com/gdamdam/mchord) |
 | **mgrains** | A granular instrument that blooms generated, imported, or live sound into clouds—or shatters it into rhythm. | [mgrains.mpump.live](https://mgrains.mpump.live/) | [gdamdam/mgrains](https://github.com/gdamdam/mgrains) |
 | **mspectr** | A spectral resynthesis instrument for capturing what sounds are made of, then morphing and playing that identity. | [mspectr.mpump.live](https://mspectr.mpump.live/) | [gdamdam/mspectr](https://github.com/gdamdam/mspectr) |
+| **mscope** | A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health. | [mscope.mpump.live](https://mscope.mpump.live/) | [gdamdam/mscope](https://github.com/gdamdam/mscope) |
 
 ## What the portal includes
 

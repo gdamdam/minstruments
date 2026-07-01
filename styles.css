@@ -361,6 +361,14 @@ h1 em {
   line-height: 1;
 }
 .native-wordmark-mspectr svg { flex: none; }
+.instrument-card h3.native-wordmark-mscope {
+  min-height: 88px;
+  background: #0f1112;
+  color: #5fb0c8;
+  font-size: clamp(8px, 1.18vw, 14px);
+  line-height: 1;
+  text-shadow: 0 0 8px rgba(95,176,200,.18);
+}
 .instrument-card h3.native-wordmark-mgrains {
   width: min(310px, 65%);
   background: #070a07;
