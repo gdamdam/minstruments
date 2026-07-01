@@ -266,6 +266,8 @@ h1 em {
   outline-offset: 4px;
 }
 .instrument-title-link:hover { filter: brightness(1.12); }
+.instrument-title-link-mgrains { width: min(310px, 65%); }
+.instrument-card .instrument-title-link-mgrains h3.native-wordmark-mgrains { width: 100%; }
 .instrument-mark-link {
   position: absolute;
   top: clamp(1.5rem, 4vw, 3rem);
