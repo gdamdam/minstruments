@@ -237,6 +237,51 @@ h1 em {
 }
 .instrument-card.is-selected { background: var(--ink); color: var(--paper); }
 .card-index { color: #6e7168; font-family: var(--mono); font-size: .7rem; }
+.beta-sticker {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 38px;
+  padding: .22rem .48rem .18rem;
+  transform: rotate(2deg);
+  border: 1px solid #171815;
+  background: #f4cf55;
+  color: #171815;
+  box-shadow: 1px 2px 0 rgba(0,0,0,.3);
+  font-family: var(--mono);
+  font-size: .61rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  line-height: 1;
+}
+.instrument-title-link {
+  display: block;
+  width: fit-content;
+  color: inherit;
+  text-decoration: none;
+}
+.instrument-title-link:focus-visible,
+.instrument-mark-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.instrument-title-link:hover { filter: brightness(1.12); }
+.instrument-mark-link {
+  position: absolute;
+  top: clamp(1.5rem, 4vw, 3rem);
+  right: clamp(1.5rem, 4vw, 3rem);
+  z-index: 1;
+  display: block;
+  width: 76px;
+  height: 76px;
+  border-radius: 15px;
+}
+.instrument-mark-link:hover { transform: translateY(-2px); }
+.instrument-mark-link .instrument-mark {
+  position: static;
+  top: auto;
+  right: auto;
+}
 .instrument-mark {
   position: absolute;
   top: clamp(1.5rem, 4vw, 3rem);
@@ -263,23 +308,6 @@ h1 em {
   line-height: 1.05;
   white-space: pre;
 }
-.terminal-mark {
-  display: grid;
-  width: 190px;
-  height: 76px;
-  padding: .7rem;
-  border: 1px solid #735037;
-  border-radius: 3px;
-  background: #1b1714;
-  color: #f0e1c2;
-  font-family: var(--mono);
-  font-size: 8px;
-  gap: .2rem .65rem;
-  grid-template-columns: auto auto auto;
-}
-.terminal-mark b { color: #ef9b50; }
-.terminal-mark span { color: #75d3d0; }
-.terminal-mark small { grid-column: 1 / -1; color: #d997bb; font-size: 8px; }
 .instrument-card h3 {
   margin: 2rem 0 1.2rem;
   font-family: var(--mono);
@@ -547,7 +575,6 @@ footer p:last-child { text-align: right; }
   .instrument-card { min-height: 410px; border-right: 1px solid #b9bbb1; }
   .instrument-mark { width: 62px; height: 62px; border-radius: 12px; }
   .ascii-mark { width: 158px; max-width: 158px; font-size: 6px; }
-  .terminal-mark { width: 158px; font-size: 7px; }
   .instrument-card:nth-last-child(2) { border-bottom: 0; }
   .workflow summary { grid-template-columns: 40px 1fr 28px; }
   .signal-flow { gap: .55rem; }
