@@ -121,6 +121,16 @@ h1 em {
   color: #c7c8c0;
   font-size: clamp(1.05rem, 2vw, 1.35rem);
 }
+.hero-principle {
+  max-width: 680px;
+  margin: -1.2rem 0 2.4rem;
+  padding-left: .9rem;
+  border-left: 2px solid var(--acid);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .76rem;
+  line-height: 1.65;
+}
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .button {
   display: inline-flex;
@@ -505,16 +515,6 @@ h1 em {
 .workflow-body li strong { color: var(--paper); }
 kbd { padding: .1rem .3rem; border: 1px solid var(--line); font-family: var(--mono); }
 
-.closing { padding-top: clamp(7rem, 14vw, 13rem); padding-bottom: clamp(7rem, 14vw, 13rem); text-align: center; }
-.closing .eyebrow { text-align: center; }
-.closing blockquote {
-  max-width: 950px;
-  margin: 0 auto 2rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 6.5vw, 6.2rem);
-  line-height: .98;
-}
-.closing > p:not(.eyebrow) { max-width: 660px; margin: 0 auto 2.5rem; color: var(--muted); }
 footer {
   display: grid;
   min-height: 180px;
