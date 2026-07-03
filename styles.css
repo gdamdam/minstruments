@@ -247,7 +247,8 @@ h1 em {
 }
 .instrument-card.is-selected { background: var(--ink); color: var(--paper); }
 .card-index { color: #6e7168; font-family: var(--mono); font-size: .7rem; }
-.beta-sticker {
+.beta-sticker,
+.alpha-sticker {
   position: absolute;
   z-index: 2;
   top: 10px;
@@ -263,6 +264,12 @@ h1 em {
   font-weight: 800;
   letter-spacing: .12em;
   line-height: 1;
+}
+/* ALPHA reads as earlier-stage than BETA: warm red-orange instead of yellow */
+.alpha-sticker {
+  background: #f47b52;
+  color: #1a0f0a;
+  transform: rotate(-2deg);
 }
 .instrument-title-link {
   display: block;
