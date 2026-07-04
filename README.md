@@ -4,7 +4,9 @@
 
 [Open the suite](https://instruments.mdrone.org/) · [Browse the instruments](https://instruments.mdrone.org/#instruments) · [See the workflows](https://instruments.mdrone.org/#workflows)
 
-m//instruments is a simple portal and launcher for nine free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
+m//instruments is a simple portal and launcher for thirteen free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
+
+> The instrument list is defined once in [`catalog.json`](./catalog.json), which generates the homepage cards, the chooser, and the JSON-LD structured data at build time. The table below mirrors it for convenience.
 
 There is no suite account, subscription, shared project database, or proprietary format. Each instrument remains an independent project with its own identity and repository.
 
@@ -21,6 +23,14 @@ There is no suite account, subscription, shared project database, or proprietary
 | **mgrains** | A granular instrument that blooms generated, imported, or live sound into clouds—or shatters it into rhythm. | [mgrains.mpump.live](https://mgrains.mpump.live/) | [gdamdam/mgrains](https://github.com/gdamdam/mgrains) |
 | **mspectr** | A spectral resynthesis instrument for capturing what sounds are made of, then morphing and playing that identity. | [mspectr.mpump.live](https://mspectr.mpump.live/) | [gdamdam/mspectr](https://github.com/gdamdam/mspectr) |
 | **mscope** | A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health. | [mscope.mpump.live](https://mscope.mpump.live/) | [gdamdam/mscope](https://github.com/gdamdam/mscope) |
+| **mvox** _(alpha)_ | A browser voice instrument for synthesizing, harmonizing, and reshaping the human voice. | [mvox.mpump.live](https://mvox.mpump.live/) | [gdamdam/mvox](https://github.com/gdamdam/mvox) |
+| **mtape** _(alpha)_ | A browser tape machine for looping, saturation, wow and flutter, and time-smeared sound. | [mtape.mpump.live](https://mtape.mpump.live/) | [gdamdam/mtape](https://github.com/gdamdam/mtape) |
+| **mfx** _(alpha)_ | A browser multi-effects rack for chaining, modulating, and routing signal processing. | [mfx.mpump.live](https://mfx.mpump.live/) | [gdamdam/mfx](https://github.com/gdamdam/mfx) |
+| **mkeys** _(alpha)_ | A browser keyboard instrument for playable synth voices, splits, and expressive performance. | [mkeys.mpump.live](https://mkeys.mpump.live/) | [gdamdam/mkeys](https://github.com/gdamdam/mkeys) |
+
+## What qualifies as a portal instrument
+
+An instrument appears in the portal when it is (1) an independent, publicly reachable project by the maintainer with its own repository, (2) a music or audio tool that fits the suite's "make, route, or inspect sound" scope, and (3) usable today — either a live app or a downloadable release. Instruments still stabilizing are listed and flagged `alpha`/`beta` rather than held back. Every entry lives in [`catalog.json`](./catalog.json); adding a row there is what makes an instrument part of the suite.
 
 ## What the portal includes
 
@@ -37,7 +47,7 @@ The homepage documents four ways to patch the projects together:
 
 1. **Sequence browser sound from the terminal:** `midip → virtual MIDI → mpumpit`
 2. **Play voiced chords through another instrument:** `mchord → virtual MIDI → mpumpit or hardware`
-3. **Run a synchronized browser ensemble:** `Link Bridge → mpump + mchord + mdrone + mgrains`
+3. **Run a synchronized browser ensemble:** [`Link Bridge`](https://github.com/gdamdam/mpump/tree/main/link-bridge)` → mpump + mchord + mdrone + mgrains`
 4. **Turn one drone into two new instruments:** `mdrone WAV → mgrains + mspectr`
 
 Open the [workflow section](https://instruments.mdrone.org/#workflows) for the full connection instructions.
@@ -79,14 +89,15 @@ Vite prints the local URL, normally `http://localhost:5173/`.
 │   ├── robots.txt                      # Crawler rules
 │   ├── sitemap.xml                     # Canonical sitemap
 │   └── marks/                          # Instrument identities
-├── index.html                          # Portal content and structure
+├── catalog.json                        # Single source of truth for instruments
+├── index.html                          # Portal structure (cards/chooser/JSON-LD generated)
 ├── rack.css                            # Current equipment-rack direction
 ├── styles.css                          # Shared/base styles
 ├── script.js                           # Chooser and wordmark behavior
 ├── visual-options.html                 # Original design studies
 ├── visual-options.css
 ├── visual-options.js
-└── vite.config.js                      # Static multi-page build
+└── vite.config.js                      # Static build + catalog generator plugin
 ```
 
 The site is intentionally small and dependency-light: semantic HTML, CSS, a little client-side JavaScript, and Vite for development and production builds. It has no API, database, analytics integration, or account system.
@@ -119,25 +130,31 @@ The canonical public URL is:
 https://instruments.mdrone.org/
 ```
 
-The homepage includes crawlable copy, canonical metadata, Open Graph/Twitter preview tags, and JSON-LD structured data for the suite and its nine instruments. [`public/sitemap.xml`](./public/sitemap.xml) points crawlers to the canonical homepage, and [`public/robots.txt`](./public/robots.txt) advertises the sitemap.
+The homepage includes crawlable copy, canonical metadata, Open Graph/Twitter preview tags, and JSON-LD structured data for the suite and its instruments (generated from [`catalog.json`](./catalog.json)). [`public/sitemap.xml`](./public/sitemap.xml) points crawlers to the canonical homepage, and [`public/robots.txt`](./public/robots.txt) advertises the sitemap.
 
 [`visual-options.html`](./visual-options.html) is intentionally marked `noindex` and blocked in `robots.txt` because it is a design-study archive, not the page that should appear in search results.
 
 ## Adding or changing an instrument
 
-Instrument content currently lives directly in [`index.html`](./index.html). When updating the catalog:
+Instrument content is defined once in [`catalog.json`](./catalog.json). A small Vite plugin in [`vite.config.js`](./vite.config.js) generates the homepage cards, the chooser buttons, the JSON-LD structured data, and the suite count from it at build time, so there is a single source of truth to edit. When updating the catalog:
 
-1. Add or edit the instrument card and its musical-intent button.
-2. Keep both the live destination and source repository links current.
-3. Put reusable marks in `public/marks/` and preserve their original proportions.
+1. Add or edit the instrument entry in `catalog.json` (name, links, description, tags, `status`, `intent`, and its `titleHtml`/`markHtml` identity markup).
+2. Keep both the live destination (`href`) and source repository (`source`) links current.
+3. Put reusable marks in `public/marks/`, preserve their original proportions, and reference them from the entry's identity markup.
 4. Use the identity shown by the instrument itself rather than inventing a suite-wide substitute.
-5. Run `npm run build` before opening a pull request.
+5. Run `npm run build` (or `npm run dev`) to regenerate the page before opening a pull request. The count in prose and structured data updates automatically from the number of entries.
 
 ## Visual identity and asset provenance
 
 The portal preserves the projects' individual character rather than forcing them into one generic product brand. SVG marks are sourced from the corresponding project repositories where available. mpumpit's mark reproduces its source-defined ASCII wordmark; midip's terminal panel reflects its transport interface because those projects do not provide standalone logo files.
 
 Each instrument remains owned and licensed through its own source repository. Check the linked project for its code license, documentation, platform requirements, and release files.
+
+## License
+
+This portal — its source, templates, and `catalog.json` — is licensed under the [GNU Affero General Public License v3.0](./LICENSE) (AGPL-3.0).
+
+The AGPL applies only to this portal. Each linked instrument is a separate project owned and licensed through its own source repository; the marks under `public/marks/` remain the property of their respective projects and are used to represent them. Check each linked repository for its own license.
 
 ## Contributing
 
