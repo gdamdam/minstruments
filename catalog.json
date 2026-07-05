@@ -95,7 +95,7 @@
       "id": "midip",
       "name": "midip",
       "accent": "#73d7e8",
-      "status": "beta",
+      "status": "stable",
       "href": "https://github.com/gdamdam/midip/releases/latest",
       "source": "https://github.com/gdamdam/midip",
       "launchLabel": "Get latest release ↗",
@@ -108,7 +108,7 @@
         "type": "SoftwareApplication",
         "url": "https://github.com/gdamdam/midip",
         "downloadUrl": "https://github.com/gdamdam/midip/releases/latest",
-        "operatingSystem": "macOS, Linux, Windows",
+        "operatingSystem": "macOS, Linux",
         "description": "A terminal MIDI sequencer and live groovebox for hardware and local MIDI workflows."
       }
     },
@@ -116,7 +116,7 @@
       "id": "mchord",
       "name": "mchord",
       "accent": "#b6d36f",
-      "status": "beta",
+      "status": "stable",
       "href": "https://mchord.mpump.live",
       "source": "https://github.com/gdamdam/mchord",
       "launchLabel": "Open instrument ↗",
@@ -136,7 +136,7 @@
       "id": "mgrains",
       "name": "mgrains",
       "accent": "#ff77b7",
-      "status": "beta",
+      "status": "stable",
       "href": "https://mgrains.mpump.live",
       "source": "https://github.com/gdamdam/mgrains",
       "launchLabel": "Open instrument ↗",
@@ -156,7 +156,7 @@
       "id": "mspectr",
       "name": "mspectr",
       "accent": "#fd684f",
-      "status": "beta",
+      "status": "stable",
       "href": "https://mspectr.mpump.live",
       "source": "https://github.com/gdamdam/mspectr",
       "launchLabel": "Open instrument ↗",
@@ -176,7 +176,7 @@
       "id": "mscope",
       "name": "mscope",
       "accent": "#5fb0c8",
-      "status": "beta",
+      "status": "stable",
       "href": "https://mscope.mpump.live",
       "source": "https://github.com/gdamdam/mscope",
       "launchLabel": "Open instrument ↗",
@@ -202,7 +202,7 @@
       "launchLabel": "Open instrument ↗",
       "description": "A browser voice instrument for synthesizing, harmonizing, and reshaping the human voice.",
       "tags": ["voice", "vocoder", "harmony"],
-      "markHtml": null,
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><img class=\"instrument-mark\" src=\"/marks/mvox.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><h3>mvox</h3></a>",
       "intent": { "order": 10, "label": "Shape the voice", "hint": "Synthesize, harmonize, reshape vocals" },
       "jsonLd": {
@@ -220,16 +220,16 @@
       "href": "https://mtape.mpump.live",
       "source": "https://github.com/gdamdam/mtape",
       "launchLabel": "Open instrument ↗",
-      "description": "A browser tape machine for looping, saturation, wow and flutter, and time-smeared sound.",
-      "tags": ["tape", "loop", "saturation"],
+      "description": "A browser multitrack tape recorder and arranger for recording any tab, mic, or file, editing clips, and bouncing finished songs.",
+      "tags": ["multitrack", "record", "arrange"],
       "markHtml": null,
       "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mtape.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mtape\"><h3>mtape</h3></a>",
-      "intent": { "order": 11, "label": "Smear time on tape", "hint": "Loops, saturation, wow and flutter" },
+      "intent": { "order": 11, "label": "Record and arrange", "hint": "Capture tabs, edit clips, bounce songs" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mtape.mpump.live/",
         "operatingSystem": "Web browser",
-        "description": "A browser tape machine for looping, saturation, wow and flutter, and time-smeared sound."
+        "description": "A browser multitrack tape recorder and arranger for capturing any tab, mic, or file, editing clips, and exporting mixdowns and stems."
       }
     },
     {
@@ -240,16 +240,16 @@
       "href": "https://mfx.mpump.live",
       "source": "https://github.com/gdamdam/mfx",
       "launchLabel": "Open instrument ↗",
-      "description": "A browser multi-effects rack for chaining, modulating, and routing signal processing.",
-      "tags": ["effects", "rack", "routing"],
-      "markHtml": null,
+      "description": "A browser effects pedalboard you play — a reorderable 12-pedal chain performed live through an XY pad.",
+      "tags": ["effects", "pedalboard", "perform"],
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><img class=\"instrument-mark\" src=\"/marks/mfx.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><h3>mfx</h3></a>",
-      "intent": { "order": 12, "label": "Process the signal", "hint": "Chain, modulate, route effects" },
+      "intent": { "order": 12, "label": "Process the signal", "hint": "Reorder pedals, perform an XY pad" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mfx.mpump.live/",
         "operatingSystem": "Web browser",
-        "description": "A browser multi-effects rack for chaining, modulating, and routing signal processing."
+        "description": "A browser effects pedalboard for processing live input through a reorderable 12-pedal chain and an XY performance pad."
       }
     },
     {
@@ -260,16 +260,16 @@
       "href": "https://mkeys.mpump.live",
       "source": "https://github.com/gdamdam/mkeys",
       "launchLabel": "Open instrument ↗",
-      "description": "A browser keyboard instrument for playable synth voices, splits, and expressive performance.",
-      "tags": ["keys", "synth", "perform"],
-      "markHtml": null,
+      "description": "A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note.",
+      "tags": ["keys", "expression", "scale"],
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><img class=\"instrument-mark\" src=\"/marks/mkeys.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><h3>mkeys</h3></a>",
-      "intent": { "order": 13, "label": "Play the keys", "hint": "Synth voices, splits, expression" },
+      "intent": { "order": 13, "label": "Play the keys", "hint": "Scale-locked ribbon, per-touch glide and pressure" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mkeys.mpump.live/",
         "operatingSystem": "Web browser",
-        "description": "A browser keyboard instrument for playable synth voices, splits, and expressive performance."
+        "description": "A browser scale-locked lead instrument with per-touch glide, timbre, and pressure so you can't play a wrong note."
       }
     }
   ]

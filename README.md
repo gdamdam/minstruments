@@ -24,31 +24,34 @@ There is no suite account, subscription, shared project database, or proprietary
 | **mspectr** | A spectral resynthesis instrument for capturing what sounds are made of, then morphing and playing that identity. | [mspectr.mpump.live](https://mspectr.mpump.live/) | [gdamdam/mspectr](https://github.com/gdamdam/mspectr) |
 | **mscope** | A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health. | [mscope.mpump.live](https://mscope.mpump.live/) | [gdamdam/mscope](https://github.com/gdamdam/mscope) |
 | **mvox** _(alpha)_ | A browser voice instrument for synthesizing, harmonizing, and reshaping the human voice. | [mvox.mpump.live](https://mvox.mpump.live/) | [gdamdam/mvox](https://github.com/gdamdam/mvox) |
-| **mtape** _(alpha)_ | A browser tape machine for looping, saturation, wow and flutter, and time-smeared sound. | [mtape.mpump.live](https://mtape.mpump.live/) | [gdamdam/mtape](https://github.com/gdamdam/mtape) |
-| **mfx** _(alpha)_ | A browser multi-effects rack for chaining, modulating, and routing signal processing. | [mfx.mpump.live](https://mfx.mpump.live/) | [gdamdam/mfx](https://github.com/gdamdam/mfx) |
-| **mkeys** _(alpha)_ | A browser keyboard instrument for playable synth voices, splits, and expressive performance. | [mkeys.mpump.live](https://mkeys.mpump.live/) | [gdamdam/mkeys](https://github.com/gdamdam/mkeys) |
+| **mtape** _(alpha)_ | A browser multitrack tape recorder and arranger for recording any tab, mic, or file, editing clips, and bouncing finished songs. | [mtape.mpump.live](https://mtape.mpump.live/) | [gdamdam/mtape](https://github.com/gdamdam/mtape) |
+| **mfx** _(alpha)_ | A browser effects pedalboard you play — a reorderable 12-pedal chain performed live through an XY pad. | [mfx.mpump.live](https://mfx.mpump.live/) | [gdamdam/mfx](https://github.com/gdamdam/mfx) |
+| **mkeys** _(alpha)_ | A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note. | [mkeys.mpump.live](https://mkeys.mpump.live/) | [gdamdam/mkeys](https://github.com/gdamdam/mkeys) |
 
 ## What qualifies as a portal instrument
 
-An instrument appears in the portal when it is (1) an independent, publicly reachable project by the maintainer with its own repository, (2) a music or audio tool that fits the suite's "make, route, or inspect sound" scope, and (3) usable today — either a live app or a downloadable release. Instruments still stabilizing are listed and flagged `alpha`/`beta` rather than held back. Every entry lives in [`catalog.json`](./catalog.json); adding a row there is what makes an instrument part of the suite.
+An instrument appears in the portal when it is (1) an independent, publicly reachable project by the maintainer with its own repository, (2) a music or audio tool that fits the suite's "make, route, or inspect sound" scope, and (3) usable today — either a live app or a downloadable release. Instruments still stabilizing are listed and flagged `alpha`/`beta` rather than held back. Status follows each project's own release maturity: `alpha` for pre-1.0 builds, `beta` for 1.x releases the portal has not yet verified, and `stable` for 1.x releases verified against their README (version, tests, and live deployment). Every entry lives in [`catalog.json`](./catalog.json); adding a row there is what makes an instrument part of the suite.
 
 ## What the portal includes
 
 - An intent-based **Choose your instrument** guide.
 - A launcher with live app and source links for every project.
 - Each instrument's native mark or interface wordmark.
-- Four documented signal routes with exact connection steps.
+- Seven documented signal routes with exact connection steps.
 - A responsive, equipment-rack visual system with no application backend.
 - A separate archive of the three original visual studies at [`visual-options.html`](https://instruments.mdrone.org/visual-options.html).
 
 ## Suite workflows
 
-The homepage documents four ways to patch the projects together:
+The homepage documents seven ways to patch the projects together:
 
 1. **Sequence browser sound from the terminal:** `midip → virtual MIDI → mpumpit`
 2. **Play voiced chords through another instrument:** `mchord → virtual MIDI → mpumpit or hardware`
-3. **Run a synchronized browser ensemble:** [`Link Bridge`](https://github.com/gdamdam/mpump/tree/main/link-bridge)` → mpump + mchord + mdrone + mgrains`
+3. **Run a synchronized browser ensemble:** [`Link Bridge`](https://github.com/gdamdam/mpump/tree/main/link-bridge)` → mpump + mchord + mdrone + mgrains + mspectr + mkeys + mfx`
 4. **Turn one drone into two new instruments:** `mdrone WAV → mgrains + mspectr`
+5. **Record any instrument into mtape:** `any m-suite tab → mtape tab capture → arrange / mixdown / stems` (Chromium desktop only)
+6. **Inspect any instrument with mscope:** `any m-suite tab → mscope tab capture → waveform / spectrum / LUFS / diagnostics` (Chromium desktop only)
+7. **Chain instruments through effects:** `mchord → mfx (tab-captures mchord) → mtape (tab-captures mfx)` (Chromium desktop only)
 
 Open the [workflow section](https://instruments.mdrone.org/#workflows) for the full connection instructions.
 

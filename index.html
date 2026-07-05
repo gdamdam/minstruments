@@ -114,7 +114,7 @@
             <p class="eyebrow">Signal routes</p>
             <h2 id="workflows-title">Patch them together</h2>
           </div>
-          <p>Four practical routes through the collection, with no suite account or proprietary project format.</p>
+          <p>Seven practical routes through the collection, with no suite account or proprietary project format.</p>
         </div>
 
         <div class="workflow-list">
@@ -159,16 +159,16 @@
           <details class="workflow">
             <summary>
               <span class="workflow-number">03</span>
-              <span><strong>Run a synchronized browser ensemble</strong><small>Link Bridge → mpump + mchord + mdrone + mgrains</small></span>
+              <span><strong>Run a synchronized browser ensemble</strong><small>Link Bridge → mpump + mchord + mdrone + mgrains + mspectr + mkeys + mfx</small></span>
               <i aria-hidden="true">+</i>
             </summary>
             <div class="workflow-body">
-              <div class="signal-flow ensemble" aria-label="Link Bridge synchronizes four browser instruments">
-                <span>Link Bridge<small>shared tempo</small></span><b>→</b><span>mpump</span><span>mchord</span><span>mdrone</span><span>mgrains</span>
+              <div class="signal-flow ensemble" aria-label="Link Bridge synchronizes seven browser instruments">
+                <span>Link Bridge<small>shared tempo</small></span><b>→</b><span>mpump</span><span>mchord</span><span>mdrone</span><span>mgrains</span><span>mspectr</span><span>mkeys</span><span>mfx</span>
               </div>
               <ol>
                 <li><strong>Install and run <a href="https://github.com/gdamdam/mpump/tree/main/link-bridge" target="_blank" rel="noreferrer">mpump Link Bridge</a></strong> from the mpump releases page. Leave it running locally.</li>
-                <li><strong>Open the instruments in separate tabs.</strong> Use mpump for the beat, mchord for harmony, mdrone for a bed, and mgrains for tempo-locked fragments.</li>
+                <li><strong>Open the instruments in separate tabs.</strong> Use mpump for the beat, mchord for harmony, mdrone for a bed, mgrains for tempo-locked fragments, mspectr for spectral morphs, mkeys for leads, and mfx for tempo-synced effects.</li>
                 <li><strong>Enable Link in each instrument.</strong> Wait until each one reports the bridge or Link session as connected.</li>
                 <li><strong>Set the tempo once.</strong> Start mpump, then bring the other parts in. Link carries tempo and phase—not audio—so mix the tabs or route them through your system audio setup.</li>
               </ol>
@@ -190,6 +190,63 @@
                 <li><strong>Granulate it.</strong> Drop the WAV into mgrains. Use Bloom for a continuous cloud or Shatter for tempo-synced fragments.</li>
                 <li><strong>Capture its identity.</strong> Drop the same WAV into mspectr, play it, and capture Snapshot A.</li>
                 <li><strong>Create contrast.</strong> Export a second mdrone variation, capture it as Snapshot B, then perform the spectral morph between them.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="workflow">
+            <summary>
+              <span class="workflow-number">05</span>
+              <span><strong>Record any instrument into mtape</strong><small>any m-suite tab → mtape tab capture → arrange / mixdown / stems</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow" aria-label="Any suite tab is captured by mtape, then arranged and mixed down">
+                <span>any m-suite tab<small>the source</small></span><b>→</b><span>mtape<small>tab capture</small></span><b>→</b><span>arrange<small>mixdown + stems</small></span>
+              </div>
+              <ol>
+                <li><strong>Play the source.</strong> Open any m-suite instrument in its own tab and get a sound going—a beat in mpump, a drone in mdrone, chords in mchord, whatever you want to keep.</li>
+                <li><strong>Capture the tab in mtape.</strong> Open mtape in a separate tab, add a Tab input, and pick the source tab (share its audio). Chromium desktop only—mtape detects unsupported browsers and disables the Tab input.</li>
+                <li><strong>Record the take.</strong> Arm the track and record; the captured audio lands as an editable, non-destructive clip.</li>
+                <li><strong>Arrange and bounce.</strong> Trim and arrange clips, then mix down to WAV or export stems.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="workflow">
+            <summary>
+              <span class="workflow-number">06</span>
+              <span><strong>Inspect any instrument with mscope</strong><small>any m-suite tab → mscope tab capture → waveform / spectrum / LUFS / diagnostics</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow" aria-label="Any suite tab is captured by mscope for analysis">
+                <span>any m-suite tab<small>the signal</small></span><b>→</b><span>mscope<small>tab capture</small></span><b>→</b><span>read<small>waveform / spectrum / LUFS</small></span>
+              </div>
+              <ol>
+                <li><strong>Open the source.</strong> Run any m-suite instrument in its own tab.</li>
+                <li><strong>Capture it in mscope.</strong> Open mscope, choose Capture tab audio, and pick the source tab with Share tab audio ticked. No changes to the source app are needed. Chromium desktop only.</li>
+                <li><strong>Read the signal.</strong> Watch waveform, spectrum, loudness (LUFS), stereo image, and signal-health diagnostics update live.</li>
+                <li><strong>Mind the caveat.</strong> Browsers may resample captured audio, so readings are measured at capture rather than lab-calibrated.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="workflow">
+            <summary>
+              <span class="workflow-number">07</span>
+              <span><strong>Chain instruments through effects</strong><small>mchord → mfx (tab-captures mchord) → mtape (tab-captures mfx)</small></span>
+              <i aria-hidden="true">+</i>
+            </summary>
+            <div class="workflow-body">
+              <div class="signal-flow" aria-label="mchord is captured by mfx, which is captured by mtape">
+                <span>mchord<small>source</small></span><b>→</b><span>mfx<small>tab-captures mchord</small></span><b>→</b><span>mtape<small>tab-captures mfx</small></span>
+              </div>
+              <ol>
+                <li><strong>Play the source.</strong> Open mchord in its own tab and build a progression.</li>
+                <li><strong>Process it in mfx.</strong> Open mfx, add a Tab input, and capture the mchord tab. Reorder the 12-pedal chain and perform with the XY pad; mfx now outputs the wet signal.</li>
+                <li><strong>Record the result in mtape.</strong> Open mtape, add a Tab input, and capture the mfx tab. Because each stage captures the previous tab, the effected chords record straight into mtape.</li>
+                <li><strong>Arrange and bounce.</strong> Edit the clip, then mix down or export stems. Chromium desktop only—chained tab capture needs getDisplayMedia at each stage.</li>
               </ol>
             </div>
           </details>
