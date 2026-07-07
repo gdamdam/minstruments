@@ -3,7 +3,7 @@
     "name": "m//instruments",
     "url": "https://instruments.mdrone.org/",
     "websiteDescription": "A suite of free, open-source browser music instruments.",
-    "suiteDescriptionTemplate": "{{countWord}} local-first browser music instruments for beats, loops, drones, MIDI, harmony, granular synthesis, spectral resynthesis, voice, tape, effects, and signal analysis.",
+    "suiteDescriptionTemplate": "{{countWord}} local-first browser music instruments for beats, loops, drones, MIDI, harmony, granular synthesis, spectral resynthesis, voice, tape, effects, signal analysis, and audio routing.",
     "license": "https://www.gnu.org/licenses/agpl-3.0.html",
     "author": {
       "name": "gdamdam",
@@ -270,6 +270,26 @@
         "url": "https://mkeys.mpump.live/",
         "operatingSystem": "Web browser",
         "description": "A browser scale-locked lead instrument with per-touch glide, timbre, and pressure so you can't play a wrong note."
+      }
+    },
+    {
+      "id": "mbus",
+      "name": "mbus",
+      "accent": "#46d6b4",
+      "status": "alpha",
+      "href": "https://mbus.mpump.live",
+      "source": "https://github.com/gdamdam/mbus",
+      "launchLabel": "Open instrument ↗",
+      "description": "A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC.",
+      "tags": ["patchbay", "route", "monitor"],
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><img class=\"instrument-mark\" src=\"/marks/mbus.svg\" alt=\"\" /></a>",
+      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><h3>mbus</h3></a>",
+      "intent": { "order": 14, "label": "Route between instruments", "hint": "Patch live outputs into one monitored mix" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://mbus.mpump.live/",
+        "operatingSystem": "Web browser",
+        "description": "A browser audio patchbay for discovering, patching, and monitoring instrument outputs peer-to-peer over WebRTC."
       }
     }
   ]
