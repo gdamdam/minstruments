@@ -259,7 +259,7 @@
             </summary>
             <div class="workflow-body">
               <div class="signal-flow" aria-label="Several instruments publish their audio to mbus, which sums them into a monitored master mix">
-                <span>m-suite tabs<small>each publishes a source</small></span><b>→</b><span>mbus<small>WebRTC, peer-to-peer</small></span><b>→</b><span>monitor<small>faders + master mix</small></span>
+                <span>m-suite tabs<small>each publishes a source</small></span><b>→</b><span>mbus<small>WebRTC, peer-to-peer</small></span><b>→</b><span>master mix<small>faders + meters</small></span>
               </div>
               <ol>
                 <li><strong>Run the mpump Link Bridge.</strong> mbus discovers sources through the same local bridge as Link—install and run it from the mpump releases page, then leave it running. Audio flows tab-to-tab over WebRTC and never touches the bridge; the bridge only relays the handshake.</li>
