@@ -425,6 +425,26 @@ h1 em {
   width: 100%;
   height: auto;
 }
+/* mvox, mtape, mfx, mkeys ship a self-contained boxed wordmark lockup (the SVG
+   already carries its own rounded panel + backdrop), so drop the native-wordmark
+   padding and background and just size the artwork. */
+.instrument-card h3.native-wordmark-mvox,
+.instrument-card h3.native-wordmark-mtape,
+.instrument-card h3.native-wordmark-mfx,
+.instrument-card h3.native-wordmark-mkeys {
+  width: min(300px, 64%);
+  min-height: 0;
+  padding: 0;
+  background: none;
+}
+.native-wordmark-mvox img,
+.native-wordmark-mtape img,
+.native-wordmark-mfx img,
+.native-wordmark-mkeys img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .instrument-card > p { max-width: 540px; min-height: 78px; font-size: 1.08rem; }
 .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: 2rem; }
 .tags span {

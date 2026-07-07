@@ -203,7 +203,7 @@
       "description": "A browser voice instrument for synthesizing, harmonizing, and reshaping the human voice.",
       "tags": ["voice", "vocoder", "harmony"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><img class=\"instrument-mark\" src=\"/marks/mvox.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><h3>mvox</h3></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mvox\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><h3 class=\"native-wordmark native-wordmark-mvox\"><img src=\"/marks/mvox-wordmark.svg\" alt=\"mvox\" /></h3></a>",
       "intent": { "order": 10, "label": "Shape the voice", "hint": "Synthesize, harmonize, reshape vocals" },
       "jsonLd": {
         "type": "WebApplication",
@@ -223,7 +223,7 @@
       "description": "A browser multitrack tape recorder and arranger for recording any tab, mic, or file, editing clips, and bouncing finished songs.",
       "tags": ["multitrack", "record", "arrange"],
       "markHtml": null,
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mtape.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mtape\"><h3>mtape</h3></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mtape\" href=\"https://mtape.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mtape\"><h3 class=\"native-wordmark native-wordmark-mtape\"><img src=\"/marks/mtape-wordmark.svg\" alt=\"mtape\" /></h3></a>",
       "intent": { "order": 11, "label": "Record and arrange", "hint": "Capture tabs, edit clips, bounce songs" },
       "jsonLd": {
         "type": "WebApplication",
@@ -243,7 +243,7 @@
       "description": "A browser effects pedalboard you play — a reorderable 12-pedal chain performed live through an XY pad.",
       "tags": ["effects", "pedalboard", "perform"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><img class=\"instrument-mark\" src=\"/marks/mfx.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><h3>mfx</h3></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mfx\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><h3 class=\"native-wordmark native-wordmark-mfx\"><img src=\"/marks/mfx-wordmark.svg\" alt=\"mfx\" /></h3></a>",
       "intent": { "order": 12, "label": "Process the signal", "hint": "Reorder pedals, perform an XY pad" },
       "jsonLd": {
         "type": "WebApplication",
@@ -263,7 +263,7 @@
       "description": "A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note.",
       "tags": ["keys", "expression", "scale"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><img class=\"instrument-mark\" src=\"/marks/mkeys.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><h3>mkeys</h3></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mkeys\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><h3 class=\"native-wordmark native-wordmark-mkeys\"><img src=\"/marks/mkeys-wordmark.svg\" alt=\"mkeys\" /></h3></a>",
       "intent": { "order": 13, "label": "Play the keys", "hint": "Scale-locked ribbon, per-touch glide and pressure" },
       "jsonLd": {
         "type": "WebApplication",
