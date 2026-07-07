@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 160" role="img" aria-label="mbus">
+  <rect width="540" height="160" rx="32" fill="#0c0e12"/>
+  <path d="M60 58 C 104 58, 102 110, 146 110"
+        fill="none" stroke="#46d6b4" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="60" cy="58" r="18" fill="#0c0e12" stroke="#46d6b4" stroke-width="9"/>
+  <circle cx="146" cy="110" r="18" fill="#0c0e12" stroke="#46d6b4" stroke-width="9"/>
+  <text x="182" y="106" font-family="'SF Mono','Fira Code','Cascadia Code',monospace"
+        font-size="72" font-weight="700" fill="#d7efe7" letter-spacing="1">mbus</text>
+</svg>

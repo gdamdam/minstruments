@@ -283,7 +283,7 @@
       "description": "A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC.",
       "tags": ["patchbay", "route", "monitor"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><img class=\"instrument-mark\" src=\"/marks/mbus.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><h3>mbus</h3></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mbus\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><h3 class=\"native-wordmark native-wordmark-mbus\"><img src=\"/marks/mbus-wordmark.svg\" alt=\"mbus\" /></h3></a>",
       "intent": { "order": 14, "label": "Route between instruments", "hint": "Patch live outputs into one monitored mix" },
       "jsonLd": {
         "type": "WebApplication",
