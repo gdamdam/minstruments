@@ -22,13 +22,13 @@ There is no suite account, subscription, shared project database, or proprietary
 | **mchord** | A harmony-first performance instrument for building progressions and moving through smoothly voiced chords. | [mchord.mpump.live](https://mchord.mpump.live/) | [gdamdam/mchord](https://github.com/gdamdam/mchord) |
 | **mgrains** | A granular instrument that blooms generated, imported, or live sound into clouds—or shatters it into rhythm. | [mgrains.mpump.live](https://mgrains.mpump.live/) | [gdamdam/mgrains](https://github.com/gdamdam/mgrains) |
 | **mspectr** | A spectral resynthesis instrument for capturing what sounds are made of, then morphing and playing that identity. | [mspectr.mpump.live](https://mspectr.mpump.live/) | [gdamdam/mspectr](https://github.com/gdamdam/mspectr) |
-| **mscope** | A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health. | [mscope.mpump.live](https://mscope.mpump.live/) | [gdamdam/mscope](https://github.com/gdamdam/mscope) |
 | **mvox** _(alpha)_ | A browser voice instrument for synthesizing, harmonizing, and reshaping the human voice. | [mvox.mpump.live](https://mvox.mpump.live/) | [gdamdam/mvox](https://github.com/gdamdam/mvox) |
 | **mtape** _(alpha)_ | A browser multitrack tape recorder and arranger for recording any tab, mic, or file, editing clips, and bouncing finished songs. | [mtape.mpump.live](https://mtape.mpump.live/) | [gdamdam/mtape](https://github.com/gdamdam/mtape) |
 | **mfx** _(alpha)_ | A browser effects pedalboard you play — a reorderable 12-pedal chain performed live through an XY pad. | [mfx.mpump.live](https://mfx.mpump.live/) | [gdamdam/mfx](https://github.com/gdamdam/mfx) |
 | **mkeys** _(alpha)_ | A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note. | [mkeys.mpump.live](https://mkeys.mpump.live/) | [gdamdam/mkeys](https://github.com/gdamdam/mkeys) |
-| **mbus** _(alpha)_ | A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC. | [mbus.mpump.live](https://mbus.mpump.live/) | [gdamdam/mbus](https://github.com/gdamdam/mbus) |
 | **mraga** _(alpha)_ | A conductable generative microtonal instrument that improvises a struck raga line over an mdrone drone in its exact tuning. | [gdamdam.github.io/mraga](https://gdamdam.github.io/mraga/) | [gdamdam/mraga](https://github.com/gdamdam/mraga) |
+| **mscope** | A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health. | [mscope.mpump.live](https://mscope.mpump.live/) | [gdamdam/mscope](https://github.com/gdamdam/mscope) |
+| **mbus** _(alpha)_ | A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC. | [mbus.mpump.live](https://mbus.mpump.live/) | [gdamdam/mbus](https://github.com/gdamdam/mbus) |
 
 ## What qualifies as a portal instrument
 

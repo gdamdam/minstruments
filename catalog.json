@@ -173,26 +173,6 @@
       }
     },
     {
-      "id": "mscope",
-      "name": "mscope",
-      "accent": "#5fb0c8",
-      "status": "stable",
-      "href": "https://mscope.mpump.live",
-      "source": "https://github.com/gdamdam/mscope",
-      "launchLabel": "Open instrument ↗",
-      "description": "A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health.",
-      "tags": ["scope", "loudness", "diagnostics"],
-      "markHtml": null,
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mscope.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mscope\"><h3 class=\"native-wordmark native-wordmark-mscope\"><span aria-hidden=\"true\">▛▛▌▛▘▛▘▛▌▛▌█▌\n▌▌▌▄▌▙▖▙▌▙▌▙▖\n         ▌</span></h3></a>",
-      "intent": { "order": 9, "label": "Inspect a signal", "hint": "Waveform, loudness, stereo, diagnostics" },
-      "jsonLd": {
-        "type": "WebApplication",
-        "url": "https://mscope.mpump.live/",
-        "operatingSystem": "Web browser",
-        "description": "A local-first browser audio scope for waveform, spectrum, loudness, stereo, and signal diagnostics."
-      }
-    },
-    {
       "id": "mvox",
       "name": "mvox",
       "accent": "#f2a0c0",
@@ -204,7 +184,7 @@
       "tags": ["voice", "vocoder", "harmony"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><img class=\"instrument-mark\" src=\"/marks/mvox.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mvox\" href=\"https://mvox.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mvox\"><h3 class=\"native-wordmark native-wordmark-mvox\"><img src=\"/marks/mvox-wordmark.svg\" alt=\"mvox\" /></h3></a>",
-      "intent": { "order": 10, "label": "Shape the voice", "hint": "Synthesize, harmonize, reshape vocals" },
+      "intent": { "order": 9, "label": "Shape the voice", "hint": "Synthesize, harmonize, reshape vocals" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mvox.mpump.live/",
@@ -224,7 +204,7 @@
       "tags": ["multitrack", "record", "arrange"],
       "markHtml": null,
       "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mtape\" href=\"https://mtape.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mtape\"><h3 class=\"native-wordmark native-wordmark-mtape\"><img src=\"/marks/mtape-wordmark.svg\" alt=\"mtape\" /></h3></a>",
-      "intent": { "order": 11, "label": "Record and arrange", "hint": "Capture tabs, edit clips, bounce songs" },
+      "intent": { "order": 10, "label": "Record and arrange", "hint": "Capture tabs, edit clips, bounce songs" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mtape.mpump.live/",
@@ -244,7 +224,7 @@
       "tags": ["effects", "pedalboard", "perform"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><img class=\"instrument-mark\" src=\"/marks/mfx.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mfx\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><h3 class=\"native-wordmark native-wordmark-mfx\"><img src=\"/marks/mfx-wordmark.svg\" alt=\"mfx\" /></h3></a>",
-      "intent": { "order": 12, "label": "Process the signal", "hint": "Reorder pedals, perform an XY pad" },
+      "intent": { "order": 11, "label": "Process the signal", "hint": "Reorder pedals, perform an XY pad" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mfx.mpump.live/",
@@ -264,32 +244,12 @@
       "tags": ["keys", "expression", "scale"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><img class=\"instrument-mark\" src=\"/marks/mkeys.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mkeys\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><h3 class=\"native-wordmark native-wordmark-mkeys\"><img src=\"/marks/mkeys-wordmark.svg\" alt=\"mkeys\" /></h3></a>",
-      "intent": { "order": 13, "label": "Play the keys", "hint": "Scale-locked ribbon, per-touch glide and pressure" },
+      "intent": { "order": 12, "label": "Play the keys", "hint": "Scale-locked ribbon, per-touch glide and pressure" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://mkeys.mpump.live/",
         "operatingSystem": "Web browser",
         "description": "A browser scale-locked lead instrument with per-touch glide, timbre, and pressure so you can't play a wrong note."
-      }
-    },
-    {
-      "id": "mbus",
-      "name": "mbus",
-      "accent": "#46d6b4",
-      "status": "alpha",
-      "href": "https://mbus.mpump.live",
-      "source": "https://github.com/gdamdam/mbus",
-      "launchLabel": "Open instrument ↗",
-      "description": "A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC.",
-      "tags": ["patchbay", "route", "monitor"],
-      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><img class=\"instrument-mark\" src=\"/marks/mbus.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mbus\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><h3 class=\"native-wordmark native-wordmark-mbus\"><img src=\"/marks/mbus-wordmark.svg\" alt=\"mbus\" /></h3></a>",
-      "intent": { "order": 14, "label": "Route between instruments", "hint": "Patch live outputs into one monitored mix" },
-      "jsonLd": {
-        "type": "WebApplication",
-        "url": "https://mbus.mpump.live/",
-        "operatingSystem": "Web browser",
-        "description": "A browser audio patchbay for discovering, patching, and monitoring instrument outputs peer-to-peer over WebRTC."
       }
     },
     {
@@ -304,12 +264,52 @@
       "tags": ["generative", "microtonal", "raga"],
       "markHtml": null,
       "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mraga\" href=\"https://gdamdam.github.io/mraga/\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mraga\"><h3 class=\"native-wordmark native-wordmark-mraga\"><img src=\"/marks/mraga-wordmark.svg\" alt=\"mraga\" /></h3></a>",
-      "intent": { "order": 15, "label": "Improvise a raga", "hint": "Conduct a generative microtonal line over a drone" },
+      "intent": { "order": 13, "label": "Improvise a raga", "hint": "Conduct a generative microtonal line over a drone" },
       "jsonLd": {
         "type": "WebApplication",
         "url": "https://gdamdam.github.io/mraga/",
         "operatingSystem": "Web browser",
         "description": "A conductable generative microtonal instrument that improvises a struck Karplus-Strong raga line over an mdrone drone in its exact tuning."
+      }
+    },
+    {
+      "id": "mscope",
+      "name": "mscope",
+      "accent": "#5fb0c8",
+      "status": "stable",
+      "href": "https://mscope.mpump.live",
+      "source": "https://github.com/gdamdam/mscope",
+      "launchLabel": "Open instrument ↗",
+      "description": "A local-first audio scope and diagnostic instrument for reading waveform, spectrum, loudness, stereo, and signal health.",
+      "tags": ["scope", "loudness", "diagnostics"],
+      "markHtml": null,
+      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mscope.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mscope\"><h3 class=\"native-wordmark native-wordmark-mscope\"><span aria-hidden=\"true\">▛▛▌▛▘▛▘▛▌▛▌█▌\n▌▌▌▄▌▙▖▙▌▙▌▙▖\n         ▌</span></h3></a>",
+      "intent": { "order": 14, "label": "Inspect a signal", "hint": "Waveform, loudness, stereo, diagnostics" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://mscope.mpump.live/",
+        "operatingSystem": "Web browser",
+        "description": "A local-first browser audio scope for waveform, spectrum, loudness, stereo, and signal diagnostics."
+      }
+    },
+    {
+      "id": "mbus",
+      "name": "mbus",
+      "accent": "#46d6b4",
+      "status": "alpha",
+      "href": "https://mbus.mpump.live",
+      "source": "https://github.com/gdamdam/mbus",
+      "launchLabel": "Open instrument ↗",
+      "description": "A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC.",
+      "tags": ["patchbay", "route", "monitor"],
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><img class=\"instrument-mark\" src=\"/marks/mbus.svg\" alt=\"\" /></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mbus\" href=\"https://mbus.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mbus\"><h3 class=\"native-wordmark native-wordmark-mbus\"><img src=\"/marks/mbus-wordmark.svg\" alt=\"mbus\" /></h3></a>",
+      "intent": { "order": 15, "label": "Route between instruments", "hint": "Patch live outputs into one monitored mix" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://mbus.mpump.live/",
+        "operatingSystem": "Web browser",
+        "description": "A browser audio patchbay for discovering, patching, and monitoring instrument outputs peer-to-peer over WebRTC."
       }
     }
   ]
