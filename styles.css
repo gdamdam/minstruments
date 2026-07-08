@@ -432,7 +432,8 @@ h1 em {
 .instrument-card h3.native-wordmark-mtape,
 .instrument-card h3.native-wordmark-mfx,
 .instrument-card h3.native-wordmark-mkeys,
-.instrument-card h3.native-wordmark-mbus {
+.instrument-card h3.native-wordmark-mbus,
+.instrument-card h3.native-wordmark-mraga {
   width: min(300px, 64%);
   min-height: 0;
   padding: 0;
@@ -442,7 +443,8 @@ h1 em {
 .native-wordmark-mtape img,
 .native-wordmark-mfx img,
 .native-wordmark-mkeys img,
-.native-wordmark-mbus img {
+.native-wordmark-mbus img,
+.native-wordmark-mraga img {
   display: block;
   width: 100%;
   height: auto;

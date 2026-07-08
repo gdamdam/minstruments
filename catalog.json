@@ -291,6 +291,26 @@
         "operatingSystem": "Web browser",
         "description": "A browser audio patchbay for discovering, patching, and monitoring instrument outputs peer-to-peer over WebRTC."
       }
+    },
+    {
+      "id": "mraga",
+      "name": "mraga",
+      "accent": "#ffab3d",
+      "status": "alpha",
+      "href": "https://gdamdam.github.io/mraga/",
+      "source": "https://github.com/gdamdam/mraga",
+      "launchLabel": "Open instrument ↗",
+      "description": "A conductable generative microtonal instrument that improvises a struck raga line over an mdrone drone in its exact tuning.",
+      "tags": ["generative", "microtonal", "raga"],
+      "markHtml": null,
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mraga\" href=\"https://gdamdam.github.io/mraga/\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mraga\"><h3 class=\"native-wordmark native-wordmark-mraga\"><img src=\"/marks/mraga-wordmark.svg\" alt=\"mraga\" /></h3></a>",
+      "intent": { "order": 15, "label": "Improvise a raga", "hint": "Conduct a generative microtonal line over a drone" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://gdamdam.github.io/mraga/",
+        "operatingSystem": "Web browser",
+        "description": "A conductable generative microtonal instrument that improvises a struck Karplus-Strong raga line over an mdrone drone in its exact tuning."
+      }
     }
   ]
 }

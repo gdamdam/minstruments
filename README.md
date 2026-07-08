@@ -4,7 +4,7 @@
 
 [Open the suite](https://instruments.mdrone.org/) · [Browse the instruments](https://instruments.mdrone.org/#instruments) · [See the workflows](https://instruments.mdrone.org/#workflows)
 
-m//instruments is a simple portal and launcher for fourteen free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
+m//instruments is a simple portal and launcher for fifteen free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
 
 > The instrument list is defined once in [`catalog.json`](./catalog.json), which generates the homepage cards, the chooser, and the JSON-LD structured data at build time. The table below mirrors it for convenience.
 
@@ -28,6 +28,7 @@ There is no suite account, subscription, shared project database, or proprietary
 | **mfx** _(alpha)_ | A browser effects pedalboard you play — a reorderable 12-pedal chain performed live through an XY pad. | [mfx.mpump.live](https://mfx.mpump.live/) | [gdamdam/mfx](https://github.com/gdamdam/mfx) |
 | **mkeys** _(alpha)_ | A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note. | [mkeys.mpump.live](https://mkeys.mpump.live/) | [gdamdam/mkeys](https://github.com/gdamdam/mkeys) |
 | **mbus** _(alpha)_ | A local-first audio patchbay that discovers each instrument's live output and patches it into a monitored master mix, tab-to-tab over WebRTC. | [mbus.mpump.live](https://mbus.mpump.live/) | [gdamdam/mbus](https://github.com/gdamdam/mbus) |
+| **mraga** _(alpha)_ | A conductable generative microtonal instrument that improvises a struck raga line over an mdrone drone in its exact tuning. | [gdamdam.github.io/mraga](https://gdamdam.github.io/mraga/) | [gdamdam/mraga](https://github.com/gdamdam/mraga) |
 
 ## What qualifies as a portal instrument
 
