@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="mmaster">
+  <defs>
+    <radialGradient id="mmaster-glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#5b9dff" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#5b9dff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#0c0e12" />
+  <rect width="512" height="512" rx="96" fill="url(#mmaster-glow)" />
+  <!-- finished master disc: concentric grooves around a center label -->
+  <g fill="none" stroke="#5b9dff" stroke-linecap="round">
+    <circle cx="256" cy="256" r="172" stroke-width="12" />
+    <circle cx="256" cy="256" r="128" stroke-width="6" opacity="0.5" />
+    <circle cx="256" cy="256" r="92" stroke-width="11" />
+  </g>
+  <circle cx="256" cy="256" r="15" fill="#ff5a3c" />
+</svg>
