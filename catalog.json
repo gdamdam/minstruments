@@ -213,26 +213,6 @@
       }
     },
     {
-      "id": "mmaster",
-      "name": "mmaster",
-      "accent": "#5b9dff",
-      "status": "alpha",
-      "href": "https://mmaster.mpump.live",
-      "source": "https://github.com/gdamdam/mmaster",
-      "launchLabel": "Open instrument ↗",
-      "description": "A corrective loudness and finishing stage for setting a loudness target, gluing the mix, true-peak limiting, and exporting the final master.",
-      "tags": ["master", "loudness", "finishing"],
-      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mmaster.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mmaster\"><img class=\"instrument-mark\" src=\"/marks/mmaster.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mmaster\" href=\"https://mmaster.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mmaster\"><h3 class=\"native-wordmark native-wordmark-mmaster\"><img src=\"/marks/mmaster-wordmark.svg\" alt=\"mmaster\" /></h3></a>",
-      "intent": { "order": 16, "label": "Master & finish", "hint": "Loudness target, glue, true-peak limit, export" },
-      "jsonLd": {
-        "type": "WebApplication",
-        "url": "https://mmaster.mpump.live/",
-        "operatingSystem": "Web browser",
-        "description": "A browser corrective loudness and finishing tool for loudness targets, glue, true-peak limiting, and exporting a finished master."
-      }
-    },
-    {
       "id": "mfx",
       "name": "mfx",
       "accent": "#8f9bff",
@@ -330,6 +310,26 @@
         "url": "https://mbus.mpump.live/",
         "operatingSystem": "Web browser",
         "description": "A browser audio patchbay for discovering, patching, and monitoring instrument outputs peer-to-peer over WebRTC."
+      }
+    },
+    {
+      "id": "mmaster",
+      "name": "mmaster",
+      "accent": "#5b9dff",
+      "status": "alpha",
+      "href": "https://mmaster.mpump.live",
+      "source": "https://github.com/gdamdam/mmaster",
+      "launchLabel": "Open instrument ↗",
+      "description": "A corrective loudness and finishing stage for setting a loudness target, gluing the mix, true-peak limiting, and exporting the final master.",
+      "tags": ["master", "loudness", "finishing"],
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mmaster.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mmaster\"><img class=\"instrument-mark\" src=\"/marks/mmaster.svg\" alt=\"\" /></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mmaster\" href=\"https://mmaster.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mmaster\"><h3 class=\"native-wordmark native-wordmark-mmaster\"><img src=\"/marks/mmaster-wordmark.svg\" alt=\"mmaster\" /></h3></a>",
+      "intent": { "order": 16, "label": "Master & finish", "hint": "Loudness target, glue, true-peak limit, export" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://mmaster.mpump.live/",
+        "operatingSystem": "Web browser",
+        "description": "A browser corrective loudness and finishing tool for loudness targets, glue, true-peak limiting, and exporting a finished master."
       }
     }
   ]
