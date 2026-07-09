@@ -216,7 +216,7 @@
       "id": "mmaster",
       "name": "mmaster",
       "accent": "#5b9dff",
-      "status": "beta",
+      "status": "alpha",
       "href": "https://mmaster.mpump.live",
       "source": "https://github.com/gdamdam/mmaster",
       "launchLabel": "Open instrument ↗",
