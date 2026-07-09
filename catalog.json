@@ -220,7 +220,7 @@
       "href": "https://mfx.mpump.live",
       "source": "https://github.com/gdamdam/mfx",
       "launchLabel": "Open instrument ↗",
-      "description": "A browser effects pedalboard you play — a reorderable 12-pedal chain performed live through an XY pad.",
+      "description": "A browser effects lab you play — a reorderable 25-pedal rack for loops, files, tab audio, mbus sources, wet sends, and reamping, performed through an XY pad.",
       "tags": ["effects", "pedalboard", "perform"],
       "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><img class=\"instrument-mark\" src=\"/marks/mfx.svg\" alt=\"\" /></a>",
       "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mfx\" href=\"https://mfx.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mfx\"><h3 class=\"native-wordmark native-wordmark-mfx\"><img src=\"/marks/mfx-wordmark.svg\" alt=\"mfx\" /></h3></a>",
@@ -229,7 +229,7 @@
         "type": "WebApplication",
         "url": "https://mfx.mpump.live/",
         "operatingSystem": "Web browser",
-        "description": "A browser effects pedalboard for processing live input through a reorderable 12-pedal chain and an XY performance pad."
+        "description": "A browser effects lab for processing loops, files, tab audio, mbus sources, and line input through a reorderable 25-pedal rack and an XY performance pad."
       }
     },
     {
