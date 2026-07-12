@@ -9,7 +9,7 @@ const labels = {
 function setChoice(choice) {
   if (!labels[choice]) return;
   localStorage.setItem('minstruments-visual-choice', choice);
-  output.textContent = labels[choice];
+  if (output) output.textContent = labels[choice];
   buttons.forEach((button) => {
     const active = button.dataset.choice === choice;
     button.classList.toggle('is-chosen', active);

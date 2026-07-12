@@ -102,6 +102,36 @@ function renderJsonLd(catalog) {
   return `<script type="application/ld+json">\n${json}\n    </script>`;
 }
 
+// Required fields are exactly what the render functions above consume; a
+// missing one would otherwise crash the build with an opaque TypeError or,
+// worse, ship a literal "undefined" in the HTML/JSON-LD.
+const REQUIRED_SITE_FIELDS = ['name', 'url', 'websiteDescription', 'suiteDescriptionTemplate', 'license'];
+const REQUIRED_INSTRUMENT_STRINGS = ['id', 'name', 'accent', 'href', 'source', 'launchLabel', 'description', 'titleHtml'];
+const REQUIRED_INTENT_FIELDS = ['order', 'label', 'hint'];
+const REQUIRED_JSONLD_FIELDS = ['type', 'url', 'operatingSystem', 'description'];
+
+function validateCatalog(catalog) {
+  const fail = (msg) => {
+    throw new Error(`catalog.json: ${msg}`);
+  };
+  const requireFields = (obj, fields, label) => {
+    if (obj == null || typeof obj !== 'object') fail(`${label} is missing or not an object`);
+    for (const field of fields) {
+      if (obj[field] == null) fail(`${label} is missing required field "${field}"`);
+    }
+  };
+  requireFields(catalog.site, REQUIRED_SITE_FIELDS, 'site');
+  requireFields(catalog.site.author, ['name', 'url'], 'site.author');
+  if (!Array.isArray(catalog.instruments)) fail('"instruments" must be an array');
+  for (const instrument of catalog.instruments) {
+    const label = `instrument "${instrument?.id ?? '<missing id>'}"`;
+    requireFields(instrument, REQUIRED_INSTRUMENT_STRINGS, label);
+    if (!Array.isArray(instrument.tags)) fail(`${label} field "tags" must be an array`);
+    requireFields(instrument.intent, REQUIRED_INTENT_FIELDS, `${label} intent`);
+    requireFields(instrument.jsonLd, REQUIRED_JSONLD_FIELDS, `${label} jsonLd`);
+  }
+}
+
 // Single source of truth: catalog.json generates the instrument cards, the
 // chooser buttons, the JSON-LD structured data, and the suite count at build
 // time. Output stays static HTML, so nothing is lost for crawlers.
@@ -110,6 +140,7 @@ function catalogPlugin() {
     name: 'minstruments-catalog',
     transformIndexHtml(html) {
       const catalog = JSON.parse(readFileSync(resolve(ROOT, 'catalog.json'), 'utf8'));
+      validateCatalog(catalog);
       const count = catalog.instruments.length;
       return html
         .replace('<!-- catalog:jsonld -->', () => renderJsonLd(catalog))
