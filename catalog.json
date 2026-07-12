@@ -76,17 +76,17 @@
       "name": "mpumpit",
       "accent": "#f3c85b",
       "status": "stable",
-      "href": "https://mpumpit.mpump.live",
+      "href": "https://play.mpump.live",
       "source": "https://github.com/gdamdam/mpumpit",
       "launchLabel": "Open instrument ↗",
       "description": "A compact browser MIDI sound module that turns notes from a sequencer, DAW, or controller into sound.",
       "tags": ["midi in", "synth", "sound module"],
       "markHtml": null,
-      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://mpumpit.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mpumpit\"><h3 class=\"native-wordmark native-wordmark-mpumpit\"><span class=\"mpumpit-rendered-wordmark\" aria-hidden=\"true\"></span></h3></a>",
+      "titleHtml": "<a class=\"instrument-title-link\" href=\"https://play.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mpumpit\"><h3 class=\"native-wordmark native-wordmark-mpumpit\"><span class=\"mpumpit-rendered-wordmark\" aria-hidden=\"true\"></span></h3></a>",
       "intent": { "order": 6, "label": "Turn MIDI into sound", "hint": "A browser sound module for any sequencer" },
       "jsonLd": {
         "type": "WebApplication",
-        "url": "https://mpumpit.mpump.live/",
+        "url": "https://play.mpump.live/",
         "operatingSystem": "Web browser",
         "description": "A browser MIDI sound module for turning sequencer, DAW, or controller notes into sound."
       }
