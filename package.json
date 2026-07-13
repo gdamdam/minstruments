@@ -1,6 +1,6 @@
 {
   "name": "minstruments",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "description": "m//instruments — independent music instruments for the browser.",
   "scripts": {

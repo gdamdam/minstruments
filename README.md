@@ -1,6 +1,6 @@
 # m//instruments
 
-**Independent music instruments for the browser.**
+**m//instruments is a collection of free, local-first browser instruments. No accounts or uploads.**
 
 [Open the suite](https://instruments.mdrone.org/) · [Browse the instruments](https://instruments.mdrone.org/#instruments) · [See the workflows](https://instruments.mdrone.org/#workflows)
 
