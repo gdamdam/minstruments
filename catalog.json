@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "m//instruments",
+    "name": "m-suite",
     "url": "https://instruments.mdrone.org/",
-    "websiteDescription": "A suite of free, open-source browser music instruments.",
+    "websiteDescription": "A collection of local-first browser instruments and music tools.",
     "suiteDescriptionTemplate": "{{countWord}} local-first browser music instruments for beats, loops, drones, MIDI, harmony, granular synthesis, spectral resynthesis, voice, tape, effects, signal analysis, and audio routing.",
     "license": "https://www.gnu.org/licenses/agpl-3.0.html",
     "author": {

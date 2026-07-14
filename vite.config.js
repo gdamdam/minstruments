@@ -137,7 +137,7 @@ function validateCatalog(catalog) {
 // time. Output stays static HTML, so nothing is lost for crawlers.
 function catalogPlugin() {
   return {
-    name: 'minstruments-catalog',
+    name: 'm-suite-catalog',
     transformIndexHtml(html) {
       const catalog = JSON.parse(readFileSync(resolve(ROOT, 'catalog.json'), 'utf8'));
       validateCatalog(catalog);

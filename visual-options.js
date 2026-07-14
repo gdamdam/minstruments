@@ -8,7 +8,7 @@ const labels = {
 
 function setChoice(choice) {
   if (!labels[choice]) return;
-  localStorage.setItem('minstruments-visual-choice', choice);
+  localStorage.setItem('m-suite-visual-choice', choice);
   if (output) output.textContent = labels[choice];
   buttons.forEach((button) => {
     const active = button.dataset.choice === choice;
@@ -19,5 +19,5 @@ function setChoice(choice) {
 }
 
 buttons.forEach((button) => button.addEventListener('click', () => setChoice(button.dataset.choice)));
-const saved = localStorage.getItem('minstruments-visual-choice');
+const saved = localStorage.getItem('m-suite-visual-choice');
 if (saved) setChoice(saved);

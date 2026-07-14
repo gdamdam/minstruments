@@ -1,10 +1,10 @@
-# m//instruments
+# m-suite
 
-**m//instruments is a collection of free, local-first browser instruments. No accounts or uploads.**
+**m-suite is a collection of local-first browser instruments and music tools. No accounts or uploads.**
 
 [Open the suite](https://instruments.mdrone.org/) · [Browse the instruments](https://instruments.mdrone.org/#instruments) · [See the workflows](https://instruments.mdrone.org/#workflows)
 
-m//instruments is a simple portal and launcher for fifteen free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows.
+m-suite is a simple portal and launcher for fifteen free, open-source music tools. It helps you choose an instrument by musical intent, open each project or its source, and connect the tools into practical workflows. The instrument collection page is called **minstruments** — one room within the family.
 
 > The instrument list is defined once in [`catalog.json`](./catalog.json), which generates the homepage cards, the chooser, and the JSON-LD structured data at build time. The table below mirrors it for convenience.
 
@@ -67,8 +67,8 @@ Open the [workflow section](https://instruments.mdrone.org/#workflows) for the f
 ### Setup
 
 ```sh
-git clone git@github.com:gdamdam/minstruments.git
-cd minstruments
+git clone git@github.com:gdamdam/m-suite.git
+cd m-suite
 npm install
 npm run dev
 ```
