@@ -26,11 +26,18 @@ function renderCard(instrument, index) {
   const sticker = STICKERS[status] ?? '';
   const mark = instrument.markHtml ?? '';
   const tagHtml = tags.map((t) => `<span>${escapeHtml(t)}</span>`).join('');
+  // Optional contextual link into a learning guide (e.g. the microtuning guide
+  // from mdrone/mkeys/mchord/mraga). Kept out of the primary action row so the
+  // Launch/Source calls to action stay unambiguous.
+  const guideLink = instrument.guideHref
+    ? `<a class="card-guide" href="${instrument.guideHref}">${escapeHtml(instrument.guideLabel ?? 'Read the guide')} →</a>`
+    : '';
   return `<article class="instrument-card" id="${id}" style="--accent:${accent}">
             <div class="card-index">m/${pad2(index + 1)}</div>
             ${sticker}${mark}
             ${instrument.titleHtml}
             <p>${escapeHtml(description)}</p>
+            ${guideLink}
             <div class="tags">${tagHtml}</div>
             <div class="card-actions">
               <a class="launch" href="${href}" target="_blank" rel="noreferrer">${escapeHtml(launchLabel)}</a>
@@ -162,14 +169,113 @@ function catalogPlugin() {
   };
 }
 
+// --- Guides ---------------------------------------------------------------
+// Learning section. Metadata lives in guides/guides.json (mirroring the
+// catalog.json convention); chapter content is authored HTML in each guide's
+// own page. The plugin renders the guides-index cards and their structured
+// data at build time so the output stays static.
+const REQUIRED_GUIDE_FIELDS = ['slug', 'title', 'href', 'summary', 'readingLevel', 'duration'];
+
+function validateGuides(data) {
+  const fail = (msg) => {
+    throw new Error(`guides.json: ${msg}`);
+  };
+  if (data == null || typeof data.section !== 'object') fail('"section" is missing or not an object');
+  if (!Array.isArray(data.guides)) fail('"guides" must be an array');
+  for (const guide of data.guides) {
+    const label = `guide "${guide?.slug ?? '<missing slug>'}"`;
+    for (const field of REQUIRED_GUIDE_FIELDS) {
+      if (guide[field] == null) fail(`${label} is missing required field "${field}"`);
+    }
+    if (!Array.isArray(guide.topics)) fail(`${label} field "topics" must be an array`);
+  }
+}
+
+function renderGuideCard(guide) {
+  const topics = (guide.topics ?? []).map((t) => `<li>${escapeHtml(t)}</li>`).join('');
+  const badge = guide.featured ? '<span class="guide-badge">Featured</span>' : '';
+  const accent = guide.accent ?? 'var(--acid)';
+  return `<a class="guide-card${guide.featured ? ' guide-card-featured' : ''}" href="${guide.href}" style="--accent:${accent}">
+            <div class="guide-card-head">
+              <p class="eyebrow">Guide</p>
+              ${badge}
+            </div>
+            <h3>${escapeHtml(guide.title)}</h3>
+            <p class="guide-card-summary">${escapeHtml(guide.summary)}</p>
+            <dl class="guide-meta">
+              <div><dt>Level</dt><dd>${escapeHtml(guide.readingLevel)}</dd></div>
+              <div><dt>Time</dt><dd>${escapeHtml(guide.duration)}</dd></div>
+            </dl>
+            <ul class="guide-topics" aria-label="Topics covered">${topics}</ul>
+            <span class="guide-card-cta">Start reading →</span>
+          </a>`;
+}
+
+function renderGuidesJsonLd(data) {
+  const { section, guides } = data;
+  const graph = [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${section.url}#guides`,
+      url: section.url,
+      name: `${section.name} — m-suite`,
+      description: section.intro,
+      inLanguage: 'en',
+      isPartOf: { '@id': 'https://instruments.mdrone.org/#website' },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${section.url}#guide-list`,
+      name: 'm-suite guides',
+      numberOfItems: guides.length,
+      itemListElement: guides.map((guide, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'LearningResource',
+          name: guide.title,
+          url: `https://instruments.mdrone.org${guide.href}`,
+          description: guide.jsonLd?.description ?? guide.summary,
+          educationalLevel: 'Beginner',
+          inLanguage: 'en',
+        },
+      })),
+    },
+  ];
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }, null, 2);
+  return `<script type="application/ld+json">\n${json}\n    </script>`;
+}
+
+function guidesPlugin() {
+  return {
+    name: 'm-suite-guides',
+    transformIndexHtml(html) {
+      // Placeholders only exist on the guides index; on other pages these
+      // replacements are harmless no-ops.
+      if (!html.includes('guides:cards') && !html.includes('guides:jsonld')) return html;
+      const data = JSON.parse(readFileSync(resolve(ROOT, 'guides/guides.json'), 'utf8'));
+      validateGuides(data);
+      return html
+        .replace('<!-- guides:jsonld -->', () => renderGuidesJsonLd(data))
+        .replace(
+          '<!-- guides:cards -->',
+          () => data.guides.map(renderGuideCard).join('\n\n          '),
+        )
+        .replaceAll('%GUIDES_INTRO%', () => escapeHtml(data.section.intro));
+    },
+  };
+}
+
 export default defineConfig({
   base: './',
-  plugins: [catalogPlugin()],
+  plugins: [catalogPlugin(), guidesPlugin()],
   build: {
     rollupOptions: {
       input: {
         main: resolve(ROOT, 'index.html'),
         visualOptions: resolve(ROOT, 'visual-options.html'),
+        guides: resolve(ROOT, 'guides/index.html'),
+        guidesMicrotuning: resolve(ROOT, 'guides/microtuning/index.html'),
       },
     },
   },

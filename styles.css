@@ -478,6 +478,21 @@ h1 em {
   font-weight: 700;
   text-decoration: none;
 }
+/* Contextual learning link — subordinate to the Launch/Source actions. */
+.card-guide {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 1rem;
+  color: #48651e;
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.card-guide:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.is-selected .card-guide { color: color-mix(in srgb, var(--accent) 78%, var(--paper)); }
 
 .workflows { border-bottom: 1px solid var(--line); }
 .workflow-list { border-top: 1px solid var(--line); }

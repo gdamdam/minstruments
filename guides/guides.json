@@ -1,0 +1,36 @@
+{
+  "section": {
+    "name": "Guides",
+    "url": "https://instruments.mdrone.org/guides/",
+    "intro": "Short, practical guides to the musical ideas the m-suite instruments make possible. Start with sound, learn only the theory you need, and leave able to make something."
+  },
+  "guides": [
+    {
+      "slug": "microtuning",
+      "title": "Microtuning with m-suite",
+      "href": "/guides/microtuning/",
+      "featured": true,
+      "status": "new",
+      "accent": "#c7a9ff",
+      "readingLevel": "Beginner · no music theory required",
+      "duration": "25–35 min read + listening",
+      "summary": "Hear why two notes can both be a “major third” yet sound different, then build a tuned drone, melody, harmony, and generative line across mdrone, mkeys, mchord, and mraga.",
+      "outcome": "You will be able to hear cents, ratios, octaves, and beating, compare tuning systems by ear, and open the four instruments with intent.",
+      "topics": [
+        "What “in tune” means",
+        "Cents & ratios",
+        "Beating",
+        "Tuning systems",
+        "Scala .scl/.kbm",
+        "MIDI & MPE"
+      ],
+      "instruments": ["mdrone", "mkeys", "mchord", "mraga"],
+      "pdf": "/microtuning-with-m-suite.pdf",
+      "ogImage": "https://instruments.mdrone.org/og-card.png",
+      "jsonLd": {
+        "description": "A beginner's field guide to microtuning: hear cents, ratios, octaves, and beating, compare tuning systems, and make a tuned drone, melody, harmony, and generative line with the m-suite instruments.",
+        "keywords": "microtuning for beginners, microtonal music, just intonation, cents, Scala tuning files, MPE, equal temperament, tuning systems"
+      }
+    }
+  ]
+}

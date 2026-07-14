@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181b18" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="gdamdam" />
+    <meta
+      name="keywords"
+      content="microtuning for beginners, microtonal music, just intonation, cents, ratios, beating, equal temperament, Scala tuning files, scl kbm, MPE, tuning systems, learn microtuning"
+    />
+    <meta
+      name="description"
+      content="A beginner's guide to microtuning — no music theory required. Hear cents, ratios, octaves, and beating, compare tuning systems, and make a tuned drone, melody, harmony, and generative line with mdrone, mkeys, mchord, and mraga."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="m-suite" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Microtuning with m-suite — a beginner's field guide" />
+    <meta
+      property="og:description"
+      content="Start with sound, not notation. Hear why two notes can both be a major third yet sound different, then make music beyond twelve equal notes."
+    />
+    <meta property="og:url" content="https://instruments.mdrone.org/guides/microtuning/" />
+    <meta property="og:image" content="https://instruments.mdrone.org/og-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Microtuning with m-suite" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Microtuning with m-suite — a beginner's field guide" />
+    <meta
+      name="twitter:description"
+      content="Hear cents, ratios, and beating, then make music beyond twelve equal notes with the m-suite instruments."
+    />
+    <meta name="twitter:image" content="https://instruments.mdrone.org/og-card.png" />
+    <link rel="canonical" href="https://instruments.mdrone.org/guides/microtuning/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <title>Microtuning with m-suite — a beginner's field guide</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/rack.css" />
+    <link rel="stylesheet" href="/guides/guide.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LearningResource",
+            "@id": "https://instruments.mdrone.org/guides/microtuning/#guide",
+            "url": "https://instruments.mdrone.org/guides/microtuning/",
+            "name": "Microtuning with m-suite — a beginner's field guide",
+            "headline": "Microtuning with m-suite",
+            "description": "A beginner's guide to microtuning: hear cents, ratios, octaves, and beating, compare tuning systems, and make a tuned drone, melody, harmony, and generative line with the m-suite instruments.",
+            "inLanguage": "en",
+            "educationalLevel": "Beginner",
+            "learningResourceType": "Guide",
+            "keywords": "microtuning for beginners, microtonal music, just intonation, cents, Scala tuning files, MPE",
+            "isPartOf": { "@id": "https://instruments.mdrone.org/guides/#guides" },
+            "author": { "@type": "Person", "name": "gdamdam", "url": "https://github.com/gdamdam" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "m-suite", "item": "https://instruments.mdrone.org/" },
+              { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://instruments.mdrone.org/guides/" },
+              { "@type": "ListItem", "position": 3, "name": "Microtuning", "item": "https://instruments.mdrone.org/guides/microtuning/" }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="rack-direction">
+    <a class="skip-link" href="#main">Skip to guide</a>
+    <div class="reading-progress" data-reading-progress role="presentation"></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="m-suite, home">
+        <span>m</span><i>-</i><span>suite</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        menu
+      </button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="/#choose">Choose</a>
+        <a href="/#instruments">Instruments</a>
+        <a href="/#workflows">Workflows</a>
+        <a href="/guides/" aria-current="page">Guides</a>
+        <a href="https://github.com/gdamdam" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="main" class="guide-main">
+      <div class="guide-layout">
+        <!-- Table of contents -->
+        <details class="guide-toc" data-toc open>
+          <summary>Chapters</summary>
+          <p class="toc-title">On this page</p>
+          <nav aria-label="Guide chapters">
+            <ol>
+              <li><a href="#ch-in-tune">What does “in tune” mean?</a></li>
+              <li><a href="#ch-theory">The minimum music theory</a></li>
+              <li><a href="#ch-hear">Hear cents, ratios &amp; beating</a></li>
+              <li><a href="#ch-systems">Compare tuning systems</a></li>
+              <li><a href="#ch-mdrone">Make a tuned drone (mdrone)</a></li>
+              <li><a href="#ch-mkeys">Play a melody (mkeys)</a></li>
+              <li><a href="#ch-mchord">Explore harmony (mchord)</a></li>
+              <li><a href="#ch-mraga">Generate a line (mraga)</a></li>
+              <li><a href="#ch-recipes">Four composition recipes</a></li>
+              <li><a href="#ch-files">Scala files, MIDI &amp; MPE</a></li>
+              <li><a href="#ch-troubleshooting">Troubleshooting</a></li>
+              <li><a href="#ch-glossary">Glossary</a></li>
+            </ol>
+          </nav>
+        </details>
+
+        <!-- Article -->
+        <article class="guide-article">
+          <header class="guide-header">
+            <p class="eyebrow">Guide · Beginner</p>
+            <h1>Microtuning with m-suite</h1>
+            <p class="guide-deck">
+              How to hear, understand, and make music beyond twelve equal notes.
+              No theory required — this guide starts with sound, not notation.
+            </p>
+            <p class="guide-header-meta">
+              <span>Beginner · no music theory required</span>
+              <span>25–35 min + listening</span>
+              <a href="/microtuning-with-m-suite.pdf" download>Download the PDF ↓</a>
+            </p>
+            <div class="guide-note">
+              <strong>How to use this guide.</strong> Microtuning is easier to
+              understand with your ears than with equations. Keep an m-suite
+              instrument open in another tab. Whenever you see a number in cents
+              or a ratio, treat it as a label for a sound — not a test to pass.
+              Use headphones if you can, and keep the volume low when stacking
+              sustained tones.
+            </div>
+          </header>
+
+          <!-- 1 -->
+          <section class="guide-chapter" id="ch-in-tune" aria-labelledby="ch-in-tune-h">
+            <p class="chapter-number">Chapter 01</p>
+            <h2 id="ch-in-tune-h">What does “in tune” mean?</h2>
+            <p>
+              Most pianos and software instruments split an octave into twelve
+              equal steps. That system is called <strong>twelve-tone equal
+              temperament</strong>, or 12-TET for short. It is so common that its
+              intervals feel neutral — like the default sound of “in tune.”
+            </p>
+            <dl class="term-def">
+              <dt>Microtuning</dt>
+              <dd>
+                Choosing a different map of pitch. Some notes may sit slightly
+                above or below the piano’s notes, an octave may hold more or
+                fewer than twelve steps, or the pattern may repeat at an interval
+                other than an octave. It does not mean “tiny intervals,” “wrong
+                notes,” or difficult mathematics — it means picking a different
+                set of pitch colours.
+              </dd>
+            </dl>
+            <p>
+              Another tuning may first sound bent, luminous, hollow, or strangely
+              calm. Those impressions are useful. Microtuning turns “in tune”
+              from a fixed law into a <em>relationship</em> among notes, timbre,
+              and musical context.
+            </p>
+            <div class="tryit">
+              <p class="tryit-label">Try it in m-suite</p>
+              <h3>A first listening experiment</h3>
+              <ol>
+                <li>Open mdrone and press <strong>HOLD</strong> at a comfortable volume.</li>
+                <li>Choose <strong>Equal (12-TET)</strong> and listen for ten seconds.</li>
+                <li>Switch to <strong>Just 5-limit</strong>, then a meantone table, then a gamelan-style table.</li>
+                <li>Describe each with ordinary words: smooth, restless, hollow, metallic, dark.</li>
+                <li>Return to 12-TET — notice it now has its own character too.</li>
+              </ol>
+              <div class="tryit-actions">
+                <a class="button button-primary" href="https://mdrone.org" target="_blank" rel="noreferrer">Open mdrone ↗</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section class="guide-chapter" id="ch-theory" aria-labelledby="ch-theory-h">
+            <p class="chapter-number">Chapter 02</p>
+            <h2 id="ch-theory-h">The minimum music theory</h2>
+            <p>
+              A repeating vibration is measured in <strong>hertz</strong> (Hz),
+              meaning cycles per second. Faster vibration usually sounds higher. A
+              tone at 440&nbsp;Hz is the concert A above middle C; a tone at
+              880&nbsp;Hz vibrates twice as fast and sounds like the same note one
+              octave higher.
+            </p>
+            <dl class="term-def">
+              <dt>Octave</dt>
+              <dd>A 2:1 frequency relationship. Double the frequency and you reach the same note class, one octave up.</dd>
+            </dl>
+            <div class="octave-vis" aria-hidden="true">
+              <div class="step"><b>110 Hz</b><small>A2</small></div>
+              <div class="step"><b>220 Hz</b><small>A3 · ×2</small></div>
+              <div class="step"><b>440 Hz</b><small>A4 · ×2</small></div>
+              <div class="step"><b>880 Hz</b><small>A5 · ×2</small></div>
+            </div>
+            <p class="visually-hidden">
+              Frequency doubles each octave: 110 Hz, 220 Hz, 440 Hz, and 880 Hz
+              are all the note A, one octave apart.
+            </p>
+            <p>
+              A <strong>tonic</strong> (or root) is the pitch that feels like
+              home. A <strong>drone</strong> — one sustained pitch — is an audible
+              ruler: when another note sounds above it, you can hear whether the
+              relationship locks, beats, floats, or rubs.
+            </p>
+            <dl class="term-def">
+              <dt>Cents</dt>
+              <dd>
+                A ruler for pitch distance. The octave is divided into 1,200
+                cents; in 12-TET each semitone is exactly 100 cents. Cents measure
+                distance, not absolute pitch — 700 cents above any note is the
+                12-TET fifth.
+              </dd>
+            </dl>
+            <dl class="term-def">
+              <dt>Ratio</dt>
+              <dd>
+                Another way to describe an interval, comparing vibration rates.
+                The octave is 2/1, a pure fifth is 3/2, a pure major third is 5/4.
+                Small-number ratios often align their overtones and can sound
+                fused or beatless.
+              </dd>
+            </dl>
+            <p>
+              12-TET slightly nudges most ratios so the same keyboard shape works
+              in every key. <strong>Just intonation</strong> does the opposite: it
+              keeps especially clean relationships to a chosen tonic. Neither is
+              universally better; each solves a different problem.
+            </p>
+          </section>
+
+          <!-- 3 -->
+          <section class="guide-chapter" id="ch-hear" aria-labelledby="ch-hear-h">
+            <p class="chapter-number">Chapter 03</p>
+            <h2 id="ch-hear-h">Hear cents, ratios, octaves, and beating</h2>
+            <p>
+              These are the sounds the rest of the guide relies on. Press a button
+              to play; press it again to stop. Only one demo plays at a time, and
+              the <strong>Stop audio</strong> button appears whenever something is
+              sounding. All tones are built from a warm, filtered waveform at a
+              conservative level.
+            </p>
+
+            <div class="demo">
+              <p class="demo-title">The octave (2:1)</p>
+              <p class="demo-desc">Two notes an octave apart — the most fused interval there is. They sound like “the same note, higher.”</p>
+              <div class="demo-controls">
+                <button class="demo-btn" type="button" aria-pressed="false"
+                  data-play="octave" data-label="an octave, 220 and 440 hertz"
+                  data-freqs="220,440" data-label-play="Play" data-label-stop="Stop">
+                  <span class="dot" aria-hidden="true"></span><span data-btn-label>Play</span>&nbsp;· 220 + 440 Hz
+                </button>
+              </div>
+            </div>
+
+            <div class="demo">
+              <p class="demo-title">Two major thirds, side by side (A/B)</p>
+              <p class="demo-desc">
+                Both are called a “major third,” but the 12-TET third is wider than
+                the pure 5/4 third. Play each over the same tonic and listen to how
+                much steadier the just third sits.
+              </p>
+              <div class="cents-ruler" aria-hidden="true">
+                <span class="tick" style="left:0%"><span>360¢</span></span>
+                <span class="tick" style="left:20%"><span>370¢</span></span>
+                <span class="tick" style="left:40%"><span>380¢</span></span>
+                <span class="tick" style="left:60%"><span>390¢</span></span>
+                <span class="tick" style="left:80%"><span>400¢</span></span>
+                <span class="marker alt" style="left:52.6%" data-label="Just 386¢" data-marker-for="third-just"></span>
+                <span class="marker" style="left:80%" data-label="12-TET 400¢" data-marker-for="third-12tet"></span>
+              </div>
+              <div class="demo-controls">
+                <button class="demo-btn" type="button" aria-pressed="false"
+                  data-play="third-12tet" data-label="12-TET major third, 400 cents"
+                  data-cents="0,400" data-label-play="Play" data-label-stop="Stop">
+                  <span class="dot" aria-hidden="true"></span><span data-btn-label>Play</span>&nbsp;A · 12-TET 400¢
+                </button>
+                <button class="demo-btn" type="button" aria-pressed="false"
+                  data-play="third-just" data-label="just major third, 386 cents, ratio 5 to 4"
+                  data-ratio="1,5/4" data-label-play="Play" data-label-stop="Stop">
+                  <span class="dot" aria-hidden="true"></span><span data-btn-label>Play</span>&nbsp;B · Just 5/4 (386¢)
+                </button>
+                <span class="demo-tag">≈ 14 cents apart</span>
+              </div>
+            </div>
+
+            <div class="demo">
+              <p class="demo-title">Two fifths, side by side (A/B)</p>
+              <p class="demo-desc">
+                The 12-TET fifth (700¢) is only a whisker below the pure 3/2 fifth
+                (≈701.96¢) — about two cents. Over a drone, the pure fifth locks
+                almost perfectly still.
+              </p>
+              <div class="cents-ruler" aria-hidden="true">
+                <span class="tick" style="left:0%"><span>694¢</span></span>
+                <span class="tick" style="left:25%"><span>697¢</span></span>
+                <span class="tick" style="left:50%"><span>700¢</span></span>
+                <span class="tick" style="left:75%"><span>703¢</span></span>
+                <span class="tick" style="left:100%"><span>706¢</span></span>
+                <span class="marker" style="left:50%" data-label="12-TET 700¢" data-marker-for="fifth-12tet"></span>
+                <span class="marker alt" style="left:66.3%" data-label="Pure 702¢" data-marker-for="fifth-pure"></span>
+              </div>
+              <div class="demo-controls">
+                <button class="demo-btn" type="button" aria-pressed="false"
+                  data-play="fifth-12tet" data-label="12-TET fifth, 700 cents"
+                  data-cents="0,700" data-label-play="Play" data-label-stop="Stop">
+                  <span class="dot" aria-hidden="true"></span><span data-btn-label>Play</span>&nbsp;A · 12-TET 700¢
+                </button>
+                <button class="demo-btn" type="button" aria-pressed="false"
+                  data-play="fifth-pure" data-label="pure fifth, ratio 3 to 2, about 702 cents"
+                  data-ratio="1,3/2" data-label-play="Play" data-label-stop="Stop">
+                  <span class="dot" aria-hidden="true"></span><span data-btn-label>Play</span>&nbsp;B · Pure 3/2 (702¢)
+                </button>
+                <span class="demo-tag">≈ 2 cents apart</span>
+              </div>
+            </div>
+
+            <div class="demo">
+              <p class="demo-title">Beating</p>
+              <p class="demo-desc">
+                Two frequencies close together interfere, making a slow rise and
+                fall in loudness called <strong>beating</strong>. Here 220&nbsp;Hz
+                and 224&nbsp;Hz beat about four times a second. Slow beating can
+                animate a drone; fast beating adds roughness.
+              </p>
+              <div class="beat-vis">
+                <span class="beat-lamp" data-beat-lamp="beat" data-beat-rate="4" aria-hidden="true"></span>
+                <span class="beat-caption">Lamp pulses ≈ 4× per second while playing (|224 − 220| = 4 Hz)</span>
+              </div>
+              <div class="demo-controls">
+                <button class="demo-btn" type="button" aria-pressed="false"
+                  data-play="beat" data-label="beating between 220 and 224 hertz"
+                  data-freqs="220,224" data-label-play="Play" data-label-stop="Stop">
+                  <span class="dot" aria-hidden="true"></span><span data-btn-label>Play</span>&nbsp;· 220 + 224 Hz
+                </button>
+              </div>
+            </div>
+
+            <div class="guide-note">
+              <strong>A note on consonance.</strong> “Consonant” usually means a
+              stable, fused relationship; “dissonant” means tension or complexity.
+              These are perceptions, not rankings of good and bad — tension is a
+              tool, not a mistake.
+            </div>
+          </section>
+
+          <!-- 4 -->
+          <section class="guide-chapter" id="ch-systems" aria-labelledby="ch-systems-h">
+            <p class="chapter-number">Chapter 04</p>
+            <h2 id="ch-systems-h">Compare common tuning systems</h2>
+            <p>
+              A tuning system is just a rule for turning pitch into a usable set of
+              notes. Here are the families you will meet in m-suite.
+            </p>
+            <div class="guide-table-wrap">
+              <table class="guide-table">
+                <caption class="visually-hidden">Common tuning systems, what to listen for, and a good first use.</caption>
+                <thead>
+                  <tr><th scope="col">System</th><th scope="col">What to listen for</th><th scope="col">Good first use</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>12-TET</td><td>Neutral, familiar; every key the same</td><td>A reliable reference to compare against</td></tr>
+                  <tr><td>Just 5-limit</td><td>Stillness and overtone fusion</td><td>A tonic drone with a fifth and third</td></tr>
+                  <tr><td>¼-comma meantone</td><td>Sweet thirds; uneven key colour</td><td>Slow chord changes</td></tr>
+                  <tr><td>Well temperaments</td><td>All keys usable, each a different colour</td><td>Transposing one progression around the keys</td></tr>
+                  <tr><td>EDO tables (19, 31…)</td><td>Familiar shapes with shifted colour</td><td>Reharmonising a simple loop</td></tr>
+                  <tr><td>Maqam / raga / pelog / slendro</td><td>Inflected degrees, distinctive contour</td><td>Short motifs over a drone</td></tr>
+                  <tr><td>Custom / Scala</td><td>A pitch world you designed</td><td>Focused experiments</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <dl class="term-def">
+              <dt>EDO / TET</dt>
+              <dd>
+                Equal Divisions of the Octave. 19-EDO splits the octave into
+                nineteen equal steps, 31-EDO into thirty-one. m-suite’s curated
+                19- and 31-TET tables are twelve-note selections from those larger
+                grids — the name does not always mean every degree is exposed.
+              </dd>
+            </dl>
+            <dl class="term-def">
+              <dt>Non-octave scales</dt>
+              <dd>
+                Some systems repeat at something other than 1,200 cents.
+                Bohlen–Pierce, for example, repeats at a 3:1 “tritave.” mkeys
+                supports arbitrary scale lengths and non-octave periods through
+                Scala import.
+              </dd>
+            </dl>
+            <div class="guide-note">
+              <strong>Names deserve care.</strong> A preset called “Rast,”
+              “Bayati,” “Yaman,” “Pelog,” or “Slendro” is an entry point into
+              pitch relationships — not a complete representation of a musical
+              tradition. Those traditions live in phrasing, ornament, hierarchy,
+              and performance practice as much as in a cents list. Use the names
+              respectfully and listen to expert performers.
+            </div>
+          </section>
+
+          <!-- 5 -->
+          <section class="guide-chapter" id="ch-mdrone" aria-labelledby="ch-mdrone-h">
+            <p class="chapter-number">Chapter 05</p>
+            <h2 id="ch-mdrone-h">Make a tuned drone with mdrone</h2>
+            <p>
+              <strong>mdrone</strong> establishes the tonic, the tuning, the drone,
+              and the long-form texture. It is the canonical source of the shared
+              tuning library the rest of the family reads, so it is the natural
+              place to start.
+            </p>
+            <div class="tryit">
+              <p class="tryit-label">Try it in m-suite</p>
+              <h3>One centre, three colours</h3>
+              <ol>
+                <li>Open mdrone, choose a tonic and octave, and press <strong>HOLD</strong>.</li>
+                <li>Start with one or two clear voices; keep effects restrained so pitch stays audible.</li>
+                <li>In <strong>ADVANCED</strong>, pick a simple relation — tonic–fifth, or a drone triad.</li>
+                <li>Compare <strong>Equal (12-TET)</strong>, <strong>Just 5-limit</strong>, and a meantone table. Change one thing at a time.</li>
+                <li>Audition each degree; read its cents value, and in just tunings notice the ratio label.</li>
+              </ol>
+              <div class="tryit-actions">
+                <a class="button button-primary" href="https://mdrone.org" target="_blank" rel="noreferrer">Open mdrone ↗</a>
+              </div>
+            </div>
+            <p>
+              The fine-detune control isn’t only a correction tool. A deviation of
+              two to five cents creates a slow pulse between sustained tones; larger
+              offsets become an expressive bend. Keep at least one stable reference
+              pitch, or the texture loses focus.
+            </p>
+            <div class="guide-note">
+              <strong>Beginner rule.</strong> Make one pitch decision at a time. If
+              tuning, voicing, timbre, effects, and motion all change together, you
+              can’t learn what caused the result.
+            </div>
+          </section>
+
+          <!-- 6 -->
+          <section class="guide-chapter" id="ch-mkeys" aria-labelledby="ch-mkeys-h">
+            <p class="chapter-number">Chapter 06</p>
+            <h2 id="ch-mkeys-h">Play a melody with mkeys</h2>
+            <p>
+              <strong>mkeys</strong> is for direct performance. It supports
+              arbitrary scale lengths, non-octave periods, and Scala
+              <code>.scl</code>/<code>.kbm</code> import, resolving each note to an
+              exact frequency. It’s scale-locked, so it’s hard to play a “wrong”
+              note while you explore.
+            </p>
+            <dl class="term-def">
+              <dt>.scl and .kbm files</dt>
+              <dd>
+                A <code>.scl</code> file describes the pitch distances in a scale
+                (as cents or ratios) — it answers “what pitches exist?” A
+                <code>.kbm</code> file maps keys or MIDI notes onto those degrees —
+                it answers “which key plays which pitch?” A 19-note or non-octave
+                scale doesn’t fit a repeating 12-key layout naturally, so the
+                keyboard map makes the relationship explicit.
+              </dd>
+            </dl>
+            <div class="tryit">
+              <p class="tryit-label">Try it in m-suite</p>
+              <h3>Turn a tuning into a phrase</h3>
+              <ol>
+                <li>Choose the same tonic and tuning you used in mdrone — or load a matching Scala file.</li>
+                <li>Play only three degrees: tonic, one contrasting degree, and a stable return note.</li>
+                <li>Repeat a short rhythm until it feels memorable before adding a fourth degree.</li>
+                <li>Change register before changing tuning — the same relationship feels different high and low.</li>
+              </ol>
+              <div class="tryit-actions">
+                <a class="button button-primary" href="https://mkeys.mpump.live" target="_blank" rel="noreferrer">Open mkeys ↗</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7 -->
+          <section class="guide-chapter" id="ch-mchord" aria-labelledby="ch-mchord-h">
+            <p class="chapter-number">Chapter 07</p>
+            <h2 id="ch-mchord-h">Explore harmony with mchord</h2>
+            <p>
+              <strong>mchord</strong> explores twelve-note microtonal harmony with
+              a built-in microtuned synth. It keeps its familiar chord and
+              voice-leading engine and only adjusts the final frequency of each of
+              the twelve pitch classes — a friendly bridge from conventional
+              harmony into new interval colour.
+            </p>
+            <div class="guide-table-wrap">
+              <table class="guide-table">
+                <caption class="visually-hidden">mchord tuning anchors and when to use each.</caption>
+                <thead><tr><th scope="col">Anchor</th><th scope="col">Meaning</th><th scope="col">Use it when…</th></tr></thead>
+                <tbody>
+                  <tr><td>Follow key</td><td>The table re-roots so the current key is its tonic</td><td>Just intonation, maqam-like scales, frequent key changes</td></tr>
+                  <tr><td>Fixed C</td><td>The table stays rooted on C</td><td>Exploring historical well temperaments and key colour</td></tr>
+                  <tr><td>Fixed note</td><td>The table stays rooted on a chosen pitch</td><td>Building around a pedal point or fixed reference</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="guide-note">
+              <strong>Important limitation.</strong> mchord’s microtuning applies
+              to its <em>internal synth</em> only — its <strong>MIDI output
+              remains 12-TET</strong>. To capture the exact tuning, record
+              mchord’s audio. To drive an external synth microtonally, use a
+              pitch-bend/MPE workflow (like mraga) or a synth that loads the same
+              Scala scale directly.
+            </div>
+            <div class="tryit">
+              <p class="tryit-label">Try it in m-suite</p>
+              <h3>One progression, three temperaments</h3>
+              <ol>
+                <li>Build a slow four-chord progression in 12-TET with smooth voice leading.</li>
+                <li>Switch to Just 5-limit with <strong>Follow key</strong> and listen to the held thirds and fifths.</li>
+                <li>Switch to a well temperament with <strong>Fixed C</strong> and move the progression through several keys.</li>
+                <li>Keep the version whose tension supports the music — not simply the most exotic tuning.</li>
+              </ol>
+              <div class="tryit-actions">
+                <a class="button button-primary" href="https://mchord.mpump.live" target="_blank" rel="noreferrer">Open mchord ↗</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8 -->
+          <section class="guide-chapter" id="ch-mraga" aria-labelledby="ch-mraga-h">
+            <p class="chapter-number">Chapter 08</p>
+            <h2 id="ch-mraga-h">Generate a tuned line with mraga</h2>
+            <p>
+              <strong>mraga</strong> generates a melodic line from an mdrone
+              scene’s tonic and tuning. You paste an mdrone link; mraga reads the
+              exact tonic, scale cents, and repeat period, then improvises a struck
+              line you steer with seven controls.
+            </p>
+            <div class="guide-flow" aria-hidden="true">
+              <span class="node">mdrone<small>tonic + tuning</small></span>
+              <b>→</b>
+              <span class="node">copy LINK<small>scene URL</small></span>
+              <b>→</b>
+              <span class="node">mraga<small>paste + conduct</small></span>
+            </div>
+            <p class="visually-hidden">
+              Workflow: build a scene in mdrone, copy its link, then paste the link
+              into mraga to import the tuning and conduct a generative line.
+            </p>
+            <div class="guide-note">
+              <strong>Two limitations to keep in mind.</strong> mraga imports the
+              tuning once from the pasted link — <strong>live changes in mdrone do
+              not automatically update mraga</strong>; after changing the tuning,
+              copy and paste a fresh mdrone link. And while mraga can send
+              microtonal MIDI using pitch bend or MPE, the receiving synth must be
+              set up for it (see the next chapter).
+            </div>
+            <div class="tryit">
+              <p class="tryit-label">Try it in m-suite</p>
+              <h3>Drone and conducted line</h3>
+              <ol>
+                <li>Build and save a sparse drone in mdrone, then press <strong>LINK</strong> to copy its scene URL.</li>
+                <li>Open mraga and paste the link — it reads the exact tonic and tuning.</li>
+                <li>Start with low <strong>density</strong>, generous <strong>silence</strong>, and calm <strong>restlessness</strong>.</li>
+                <li>Choose a register and voice that sit above the drone without masking it.</li>
+              </ol>
+              <div class="tryit-actions">
+                <a class="button button-primary" href="https://gdamdam.github.io/mraga/" target="_blank" rel="noreferrer">Open mraga ↗</a>
+                <a class="button button-quiet" href="https://mdrone.org" target="_blank" rel="noreferrer">Open mdrone ↗</a>
+              </div>
+            </div>
+            <div class="guide-note">
+              A named raga adds grammar beyond the tuning, but — like any tradition
+              named by a preset — it still deserves contextual listening and study,
+              not just a scale selection.
+            </div>
+          </section>
+
+          <!-- 9 -->
+          <section class="guide-chapter" id="ch-recipes" aria-labelledby="ch-recipes-h">
+            <p class="chapter-number">Chapter 09</p>
+            <h2 id="ch-recipes-h">Four composition recipes</h2>
+            <h3>A — Still just-intonation ambient</h3>
+            <p>mdrone in Just 5-limit, tonic–fifth or a drone triad, slow movement. In mkeys, a three-degree motif with long notes and wide rests. Introduce one degree every 30–60 seconds; remove material before adding effects.</p>
+            <h3>B — Meantone chord study</h3>
+            <p>mchord in ¼-comma meantone, a slow progression, smooth voicing. Compare <strong>Follow key</strong> against <strong>Fixed C</strong>, and let one chord ring long enough to hear its beating. Record the internal audio to preserve the tuning.</p>
+            <h3>C — Drone and conducted raga line</h3>
+            <p>mdrone with a suitable tuning and a sparse texture; copy the scene link. In mraga, paste it and start with low density and high silence. Open with free timing, then bring in a pulse later.</p>
+            <h3>D — Non-octave miniature</h3>
+            <p>mkeys with a non-octave <code>.scl</code> and its <code>.kbm</code> map. Use only four degrees and a repeated rhythmic cell. Think in contour, register, and colour rather than conventional chord labels.</p>
+          </section>
+
+          <!-- 10 -->
+          <section class="guide-chapter" id="ch-files" aria-labelledby="ch-files-h">
+            <p class="chapter-number">Chapter 10</p>
+            <h2 id="ch-files-h">Scala files, MIDI, and MPE</h2>
+            <p>
+              Different goals call for different transports. Pick the one that
+              keeps what matters for your piece.
+            </p>
+            <div class="guide-table-wrap">
+              <table class="guide-table">
+                <caption class="visually-hidden">Choosing a transport for tuning, sharing, and MIDI.</caption>
+                <thead><tr><th scope="col">Goal</th><th scope="col">Recommended method</th></tr></thead>
+                <tbody>
+                  <tr><td>Preserve the exact sound</td><td>Record / export audio from the instrument</td></tr>
+                  <tr><td>Reopen a scene in m-suite</td><td>Use the app’s self-contained share link</td></tr>
+                  <tr><td>Move a tuning between compatible tools</td><td>Use <code>.scl</code>; add <code>.kbm</code> when key mapping matters</td></tr>
+                  <tr><td>Drive an MPE synth from mraga</td><td>MPE MIDI, with the receiver’s pitch-bend range matched</td></tr>
+                  <tr><td>Send mchord to ordinary MIDI gear</td><td>Expect 12-TET MIDI; record internal audio for its microtuning</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <dl class="term-def">
+              <dt>MPE</dt>
+              <dd>
+                MIDI Polyphonic Expression. Standard MIDI notes name piano-key
+                pitches, and a pitch bend supplies the offset. In single-channel
+                mode one bend affects every note on that channel, so overlapping
+                notes can retune each other. MPE spreads notes across separate
+                channels so each can bend independently.
+              </dd>
+            </dl>
+            <div class="guide-note">
+              <strong>Match the pitch-bend range.</strong> Microtonal MIDI only
+              lands correctly if the sending and receiving pitch-bend ranges agree
+              (and MPE is enabled on both ends where used). If an external synth
+              ignores the tuning, that mismatch is the usual cause — check it in
+              the instrument’s MIDI settings before assuming anything is broken.
+            </div>
+            <p>
+              <a href="/microtuning-with-m-suite.pdf" download>Download this guide as a PDF</a>
+              to keep the checklists and tables offline.
+            </p>
+          </section>
+
+          <!-- 11 -->
+          <section class="guide-chapter" id="ch-troubleshooting" aria-labelledby="ch-troubleshooting-h">
+            <p class="chapter-number">Chapter 11</p>
+            <h2 id="ch-troubleshooting-h">Troubleshooting</h2>
+            <div class="guide-table-wrap">
+              <table class="guide-table">
+                <caption class="visually-hidden">Common symptoms, likely causes, and what to try.</caption>
+                <thead><tr><th scope="col">Symptom</th><th scope="col">Likely cause</th><th scope="col">Try this</th></tr></thead>
+                <tbody>
+                  <tr><td>Everything sounds “wrong”</td><td>Too many variables changed at once</td><td>Return to a tonic drone; use three degrees; remove effects</td></tr>
+                  <tr><td>Chords sound muddy</td><td>Dense voicing, low register, or fast beating</td><td>Raise the voicing, remove a note, simplify the timbre</td></tr>
+                  <tr><td>mraga no longer matches mdrone</td><td>mdrone’s tuning changed after the link was pasted</td><td>Copy and paste a fresh mdrone link</td></tr>
+                  <tr><td>External synth ignores the tuning</td><td>Ordinary MIDI, or a mismatched bend range</td><td>Use MPE / pitch bend and match the pitch-bend range on both ends</td></tr>
+                  <tr><td>Overlapping MIDI notes bend together</td><td>Single-channel pitch-bend limitation</td><td>Use MPE, or avoid overlapping releases</td></tr>
+                  <tr><td>A Scala scale feels scrambled</td><td>Keyboard map missing or unsuitable</td><td>Load or create a matching <code>.kbm</code> map</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 12 -->
+          <section class="guide-chapter" id="ch-glossary" aria-labelledby="ch-glossary-h">
+            <p class="chapter-number">Chapter 12</p>
+            <h2 id="ch-glossary-h">Glossary</h2>
+            <div class="guide-table-wrap">
+              <table class="guide-table">
+                <caption class="visually-hidden">Glossary of microtuning terms.</caption>
+                <thead><tr><th scope="col">Term</th><th scope="col">Meaning</th></tr></thead>
+                <tbody>
+                  <tr><td>12-TET</td><td>The octave divided into twelve equal 100-cent steps.</td></tr>
+                  <tr><td>Cent</td><td>1/1,200 of an octave; a unit of pitch distance.</td></tr>
+                  <tr><td>EDO</td><td>Equal divisions of the octave.</td></tr>
+                  <tr><td>Frequency</td><td>Vibration rate measured in hertz (Hz).</td></tr>
+                  <tr><td>Interval</td><td>The distance between two pitches.</td></tr>
+                  <tr><td>Just intonation</td><td>Tuning based on selected whole-number frequency ratios.</td></tr>
+                  <tr><td>Microtuning</td><td>Any deliberate pitch organisation beyond the assumed standard tuning.</td></tr>
+                  <tr><td>MPE</td><td>MIDI mode giving notes separate expressive channels, including pitch bend.</td></tr>
+                  <tr><td>Period</td><td>The interval after which a scale pattern repeats.</td></tr>
+                  <tr><td>Ratio</td><td>A comparison of two frequencies, such as 3/2.</td></tr>
+                  <tr><td>Scala .scl</td><td>Text format describing a scale’s pitch distances.</td></tr>
+                  <tr><td>Scala .kbm</td><td>Text format mapping keys / MIDI notes to scale degrees.</td></tr>
+                  <tr><td>Tonic</td><td>The pitch perceived as home or reference.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="guide-note">
+              <strong>Quick formulas</strong> (you don’t need them to compose):
+              frequency from cents is <code>tonic × 2^(cents ÷ 1200)</code>; cents
+              from a ratio is <code>1200 × log₂(ratio)</code>; one octave up is
+              <code>× 2</code>.
+            </div>
+          </section>
+
+          <nav class="guide-footer-nav" aria-label="Guide navigation">
+            <a class="button button-quiet" href="/guides/">← All guides</a>
+            <a class="button button-primary" href="https://mdrone.org" target="_blank" rel="noreferrer">Start with mdrone ↗</a>
+          </nav>
+        </article>
+      </div>
+    </main>
+
+    <!-- Global audio state: stop control + screen-reader announcements -->
+    <div class="audio-bar" data-audio-bar role="group" aria-label="Audio playback">
+      <span class="now-playing" data-now-playing></span>
+      <button type="button" data-audio-stop>■ Stop audio</button>
+    </div>
+    <div class="visually-hidden" role="status" aria-live="polite" data-audio-live></div>
+
+    <footer>
+      <a class="wordmark" href="/"><span>m</span><i>-</i><span>suite</span></a>
+      <p>m-suite is a collection of local-first browser instruments and music tools. No accounts or uploads.</p>
+      <p>Built in the open by <a href="https://github.com/gdamdam" target="_blank" rel="noreferrer">gdamdam ↗</a></p>
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+    <script type="module" src="./audio.js"></script>
+  </body>
+</html>

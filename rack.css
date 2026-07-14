@@ -241,6 +241,9 @@
 .rack-direction .tags span { border-color: #50554d; background: #202320; color: #aeb2a8; }
 .rack-direction .card-actions a { color: #c8cbc3; }
 .rack-direction .card-actions .launch { border-bottom-color: var(--accent); color: var(--accent); }
+.rack-direction .card-guide { color: color-mix(in srgb, var(--accent) 80%, var(--rack-text)); }
+.rack-direction .card-guide:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.rack-direction .is-selected .card-guide { color: var(--accent); }
 
 .rack-direction .workflows {
   margin-block: 3rem;
