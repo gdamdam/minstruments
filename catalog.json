@@ -137,6 +137,28 @@
       }
     },
     {
+      "id": "mkeys",
+      "name": "mkeys",
+      "accent": "#6ddccb",
+      "status": "alpha",
+      "href": "https://mkeys.mpump.live",
+      "source": "https://github.com/gdamdam/mkeys",
+      "launchLabel": "Open instrument ↗",
+      "description": "A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note.",
+      "tags": ["keys", "expression", "scale"],
+      "guideHref": "/guides/microtuning/",
+      "guideLabel": "Microtuning guide",
+      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><img class=\"instrument-mark\" src=\"/marks/mkeys.svg\" alt=\"\" /></a>",
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mkeys\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><h3 class=\"native-wordmark native-wordmark-mkeys\"><img src=\"/marks/mkeys-wordmark.svg\" alt=\"mkeys\" /></h3></a>",
+      "intent": { "order": 12, "label": "Play the keys", "hint": "Scale-locked ribbon, per-touch glide and pressure" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://mkeys.mpump.live/",
+        "operatingSystem": "Web browser",
+        "description": "A browser scale-locked lead instrument with per-touch glide, timbre, and pressure so you can't play a wrong note."
+      }
+    },
+    {
       "id": "mgrains",
       "name": "mgrains",
       "accent": "#ff77b7",
@@ -197,6 +219,28 @@
       }
     },
     {
+      "id": "mraga",
+      "name": "mraga",
+      "accent": "#ffab3d",
+      "status": "alpha",
+      "href": "https://gdamdam.github.io/mraga/",
+      "source": "https://github.com/gdamdam/mraga",
+      "launchLabel": "Open instrument ↗",
+      "description": "A conductable generative microtonal instrument that improvises a struck raga line over an mdrone drone in its exact tuning.",
+      "tags": ["generative", "microtonal", "raga"],
+      "guideHref": "/guides/microtuning/",
+      "guideLabel": "Microtuning guide",
+      "markHtml": null,
+      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mraga\" href=\"https://gdamdam.github.io/mraga/\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mraga\"><h3 class=\"native-wordmark native-wordmark-mraga\"><img src=\"/marks/mraga-wordmark.svg\" alt=\"mraga\" /></h3></a>",
+      "intent": { "order": 13, "label": "Improvise a raga", "hint": "Conduct a generative microtonal line over a drone" },
+      "jsonLd": {
+        "type": "WebApplication",
+        "url": "https://gdamdam.github.io/mraga/",
+        "operatingSystem": "Web browser",
+        "description": "A conductable generative microtonal instrument that improvises a struck Karplus-Strong raga line over an mdrone drone in its exact tuning."
+      }
+    },
+    {
       "id": "mtape",
       "name": "mtape",
       "accent": "#cbb079",
@@ -234,50 +278,6 @@
         "url": "https://mfx.mpump.live/",
         "operatingSystem": "Web browser",
         "description": "A browser effects lab for processing loops, files, tab audio, mbus sources, and line input through a reorderable 25-pedal rack and an XY performance pad."
-      }
-    },
-    {
-      "id": "mkeys",
-      "name": "mkeys",
-      "accent": "#6ddccb",
-      "status": "alpha",
-      "href": "https://mkeys.mpump.live",
-      "source": "https://github.com/gdamdam/mkeys",
-      "launchLabel": "Open instrument ↗",
-      "description": "A browser scale-locked lead instrument where every touch bends, glides, and shapes timbre so you can't play a wrong note.",
-      "tags": ["keys", "expression", "scale"],
-      "guideHref": "/guides/microtuning/",
-      "guideLabel": "Microtuning guide",
-      "markHtml": "<a class=\"instrument-mark-link\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><img class=\"instrument-mark\" src=\"/marks/mkeys.svg\" alt=\"\" /></a>",
-      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mkeys\" href=\"https://mkeys.mpump.live\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mkeys\"><h3 class=\"native-wordmark native-wordmark-mkeys\"><img src=\"/marks/mkeys-wordmark.svg\" alt=\"mkeys\" /></h3></a>",
-      "intent": { "order": 12, "label": "Play the keys", "hint": "Scale-locked ribbon, per-touch glide and pressure" },
-      "jsonLd": {
-        "type": "WebApplication",
-        "url": "https://mkeys.mpump.live/",
-        "operatingSystem": "Web browser",
-        "description": "A browser scale-locked lead instrument with per-touch glide, timbre, and pressure so you can't play a wrong note."
-      }
-    },
-    {
-      "id": "mraga",
-      "name": "mraga",
-      "accent": "#ffab3d",
-      "status": "alpha",
-      "href": "https://gdamdam.github.io/mraga/",
-      "source": "https://github.com/gdamdam/mraga",
-      "launchLabel": "Open instrument ↗",
-      "description": "A conductable generative microtonal instrument that improvises a struck raga line over an mdrone drone in its exact tuning.",
-      "tags": ["generative", "microtonal", "raga"],
-      "guideHref": "/guides/microtuning/",
-      "guideLabel": "Microtuning guide",
-      "markHtml": null,
-      "titleHtml": "<a class=\"instrument-title-link instrument-title-link-mraga\" href=\"https://gdamdam.github.io/mraga/\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Open mraga\"><h3 class=\"native-wordmark native-wordmark-mraga\"><img src=\"/marks/mraga-wordmark.svg\" alt=\"mraga\" /></h3></a>",
-      "intent": { "order": 13, "label": "Improvise a raga", "hint": "Conduct a generative microtonal line over a drone" },
-      "jsonLd": {
-        "type": "WebApplication",
-        "url": "https://gdamdam.github.io/mraga/",
-        "operatingSystem": "Web browser",
-        "description": "A conductable generative microtonal instrument that improvises a struck Karplus-Strong raga line over an mdrone drone in its exact tuning."
       }
     },
     {
